@@ -1,0 +1,15 @@
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\bin\Debug\net10.0\c-sharp.exe
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\bin\Debug\net10.0\c-sharp.deps.json
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\bin\Debug\net10.0\c-sharp.runtimeconfig.json
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\bin\Debug\net10.0\c-sharp.dll
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\bin\Debug\net10.0\c-sharp.pdb
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\obj\Debug\net10.0\c-sharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\obj\Debug\net10.0\c-sharp.AssemblyInfoInputs.cache
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\obj\Debug\net10.0\c-sharp.AssemblyInfo.cs
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\obj\Debug\net10.0\c-sharp.csproj.CoreCompileInputs.cache
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\obj\Debug\net10.0\c-sharp.sourcelink.json
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\obj\Debug\net10.0\c-sharp.dll
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\obj\Debug\net10.0\refint\c-sharp.dll
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\obj\Debug\net10.0\c-sharp.pdb
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\obj\Debug\net10.0\c-sharp.genruntimeconfig.cache
+C:\Users\Madhusudan Bhandari\Desktop\c#\c-sharp\obj\Debug\net10.0\ref\c-sharp.dll
