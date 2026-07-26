@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Madhusudan Bhandari\\.nuget\\packages\\": {}
+    "/Users/madhusudanbhandari/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Madhusudan Bhandari\\Desktop\\c#\\c-sharp\\c-sharp.csproj",
+      "projectUniqueName": "/Users/madhusudanbhandari/Desktop/c#/c-sharp/c-sharp.csproj",
       "projectName": "c-sharp",
-      "projectPath": "C:\\Users\\Madhusudan Bhandari\\Desktop\\c#\\c-sharp\\c-sharp.csproj",
-      "packagesPath": "C:\\Users\\Madhusudan Bhandari\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Madhusudan Bhandari\\Desktop\\c#\\c-sharp\\obj\\",
+      "projectPath": "/Users/madhusudanbhandari/Desktop/c#/c-sharp/c-sharp.csproj",
+      "packagesPath": "/Users/madhusudanbhandari/.nuget/packages/",
+      "outputPath": "/Users/madhusudanbhandari/Desktop/c#/c-sharp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Madhusudan Bhandari\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/madhusudanbhandari/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.302/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
