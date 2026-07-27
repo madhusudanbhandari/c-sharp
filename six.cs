@@ -1,4 +1,4 @@
-﻿// using System;
+// using System;
 
 // namespace hello
 // {
@@ -160,25 +160,31 @@
 
 //automatic properties
 
-using System;
+// using System;
 
-namespace hello
-{
-    class Person
-    {
-        public string Name
-        {
-            get; set;
-        }
+// namespace hello
+// {
+//     class Person
+//     {
+//         public string Name
+//         {
+//             get; set;
+//         }
 
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                Person obj=new Person();
-                obj.Name="Sompal";
-                Console.WriteLine(obj.Name);
-            }
-        }
-    }
-}
+//         class Program
+//         {
+//             static void Main(string[] args)
+//             {
+//                 Person obj=new Person();
+//                 obj.Name="Sompal";
+//                 Console.WriteLine(obj.Name);
+//             }
+//         }
+//     }
+//}
+
+
+
+
+
+
