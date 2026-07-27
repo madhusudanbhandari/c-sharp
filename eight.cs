@@ -1,4 +1,4 @@
-﻿// //enums=special class with the group of constants that are read only
+// //enums=special class with the group of constants that are read only
 
 // // using System;
 
@@ -115,13 +115,13 @@
 //thorw message
 
 
-    int age=43;
-    if (age < 18)
-    {
-        throw new ArithmeticException("Access denied age less than 18");
-    }
-    else
-    {
-        Console.WriteLine("Allowed");
-    }
+    // int age=43;
+    // if (age < 18)
+    // {
+    //     throw new ArithmeticException("Access denied age less than 18");
+    // }
+    // else
+    // {
+    //     Console.WriteLine("Allowed");
+    // }
 
