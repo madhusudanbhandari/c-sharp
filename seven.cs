@@ -1,4 +1,4 @@
-﻿// //inheritence
+// //inheritence
 
 // using System;
 
@@ -196,38 +196,41 @@
 
 //Multiple inheritence
 
-using System;
+// using System;
 
-namespace hello
-{
-    interface IFirst
-    {
-        void myMethod();
-    }
-    interface ISecond
-    {
-        void myOtherMethod();
-    }
+// namespace hello
+// {
+//     interface IFirst
+//     {
+//         void myMethod();
+//     }
+//     interface ISecond
+//     {
+//         void myOtherMethod();
+//     }
 
-    class Demo : IFirst, ISecond
-    {
-        public void myMethod()
-        {
-            Console.WriteLine("This is my first method");
-        }
+//     class Demo : IFirst, ISecond
+//     {
+//         public void myMethod()
+//         {
+//             Console.WriteLine("This is my first method");
+//         }
 
-        public void myOtherMethod()
-        {
-            Console.WriteLine("This is my other methodo");
-        }
-    }
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Demo demo=new Demo();
-            demo.myMethod();
-            demo.myOtherMethod();
-        }
-    }
-}
+//         public void myOtherMethod()
+//         {
+//             Console.WriteLine("This is my other methodo");
+//         }
+//     }
+//     class Program
+//     {
+//         static void Main(string[] args)
+//         {
+//             Demo demo=new Demo();
+//             demo.myMethod();
+//             demo.myOtherMethod();
+//         }
+//     }
+// }
+
+
+
