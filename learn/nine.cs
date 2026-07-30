@@ -1,4 +1,4 @@
-﻿// using System;
+// using System;
 
 // namespace hello
 // {
@@ -139,32 +139,34 @@
 //Generic 
 
 
-using System;
+// using System;
 
-namespace  Name
-{
-    class Box<T>
-    {
+// namespace  Name
+// {
+//     class Box<T>
+//     {
         
-        public T Value {get; set;}
-    }
+//         public T Value {get; set;}
+//     }
 
-    class Program
-    {
-        static void Main()
-        {
-            Box<int> intBox=new Box<int>();
-            intBox.Value=23;
+//     class Program
+//     {
+//         static void Main()
+//         {
+//             Box<int> intBox=new Box<int>();
+//             intBox.Value=23;
 
 
-            Box<string> stringBox=new Box<string>();
-            {
-                stringBox.Value="Helllo";
-            }
+//             Box<string> stringBox=new Box<string>();
+//             {
+//                 stringBox.Value="Helllo";
+//             }
 
-            Console.WriteLine(intBox.Value);
-            Console.WriteLine(stringBox.Value);
-        }
-    }
+//             Console.WriteLine(intBox.Value);
+//             Console.WriteLine(stringBox.Value);
+//         }
+//     }
     
-}
+// }
+
+

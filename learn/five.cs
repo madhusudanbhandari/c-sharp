@@ -68,27 +68,27 @@
 
 //Method overloading
 
-using System;
+// using System;
 
-namespace hello
-{
-    class Program
-    {
-        static int Plus(int a, int b)
-        {
-            return a+b;
-        }
-        static double Plus(double a, double b)
-        {
-            return a+b;
-        }
+// namespace hello
+// {
+//     class Program
+//     {
+//         static int Plus(int a, int b)
+//         {
+//             return a+b;
+//         }
+//         static double Plus(double a, double b)
+//         {
+//             return a+b;
+//         }
 
-        static void Main(string [] args)
-        {
-            int sum1=Plus(2,4);
-            double sum2=Plus(3.5,5.6);
-            Console.WriteLine(sum1);
-            Console.WriteLine(sum2);
-        }
-    }
-}
+//         static void Main(string [] args)
+//         {
+//             int sum1=Plus(2,4);
+//             double sum2=Plus(3.5,5.6);
+//             Console.WriteLine(sum1);
+//             Console.WriteLine(sum2);
+//         }
+//     }
+//}
