@@ -1,4 +1,4 @@
-﻿// //events
+// //events
 
 // using System;
 
@@ -117,18 +117,18 @@
 
 //with record
 
-public record Person(
-    string name,
-    int age
-);
+// public record Person(
+//     string name,
+//     int age
+// );
 
-class Program
-{
-    static void Main()
-    {
-        Person p1=new Person("Madhu",22);
-        Person p2=new Person("Madhu",22);
+// class Program
+// {
+//     static void Main()
+//     {
+//         Person p1=new Person("Madhu",22);
+//         Person p2=new Person("Madhu",22);
 
-        Console.WriteLine(p1==p2);
-    }
-}
+//         Console.WriteLine(p1==p2);
+//     }
+// }
