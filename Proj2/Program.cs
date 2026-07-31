@@ -1,6 +1,8 @@
+using Microsoft.EntityFrameworkCore;
 using Proj2.Interfaces;
 using Proj2.Models;
 using Proj2.Services;
+using Proj2.Data;
 
 var builder=WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,13 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddScoped<IProductService, ProductService>();
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseNpgsql(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    );
+});
 
 var app=builder.Build();
 

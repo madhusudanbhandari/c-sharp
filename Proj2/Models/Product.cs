@@ -1,6 +1,6 @@
 namespace Proj2.Models;
 
-public class Products
+public class Product
 {
 public int id {get; set;}
 public string Name{get; set;}="";

@@ -5,23 +5,23 @@ namespace Proj2.Services;
 
 public class ProductService : IProductService
 {
-    public List<Products> GetProducts()
+    public List<Product> GetProducts()
     {
-        return new List<Products>
+        return new List<Product>
         {
-            new Products
+            new Product
             {
                 id=1,
                 Name="Laptop",
                 Price=20000
             },
-            new Products
+            new Product
             {
                 id=2,
                 Name="Mobile",
                 Price=35000
             },
-            new Products
+            new Product
             {
                 id=3,
                 Name="Charger",
