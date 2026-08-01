@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Proj2.Interfaces;
 using Proj2.Models;
-
+using Proj2.DTOS;
+using Proj2.DTOs;
 namespace Proj2.Controllers;
 
 [ApiController]
@@ -19,15 +20,23 @@ public class ProductsController : ControllerBase
 
     [HttpGet]
 
-    public async Task<ActionResult<List<Product>>> GetAllProducts()
+    public async Task<ActionResult<List<ProductResponseDto>>> GetAllProducts()
     {
         var products=await _productService.GetAllProductsAsync();
 
-        return products;
+        var response=products.Select(Product=>
+        new ProductResponseDto
+        {
+            Id=Product.Id,
+            Name=Product.Name,
+            Price=Product.Price
+        }).ToList();
+
+        return Ok(response);
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<Product>> GetProductById(int id)
+    public async Task<ActionResult<ProductResponseDto>> GetProductById(int id)
     {
         var product=await _productService.GetProductByIdAsync(id);
 
@@ -36,25 +45,51 @@ public class ProductsController : ControllerBase
             return NotFound();
         }
 
-        return Ok(product);
+        ProductResponseDto response=new ProductResponseDto
+        {
+            Id=product.Id,
+            Name=product.Name,
+            Price=product.Price
+        };
+
+        return Ok(response);
     }
 
     [HttpPost]
-    public async Task<ActionResult<Product>> CreateProduct(Product product)
+    public async Task<ActionResult<ProductResponseDto>> CreateProduct(ProductCreateDto dto)
     {
+        Product product=new Product
+        {
+            Name=dto.Name,
+            Price=dto.Price
+        };
         var createdProduct=await _productService.CreateProductAsync(product);
+
+        ProductResponseDto response= new ProductResponseDto
+        {
+            Id=createdProduct.Id,
+            Name=createdProduct.Name,
+            Price=createdProduct.Price
+        };
 
         return CreatedAtAction(
             nameof(GetProductById),
-            new{id=createdProduct.id},
-            createdProduct
+            new{id=response.Id},
+            response
         );
+
+        
     }
 
     [HttpPut("{id}")]
-
-    public async Task<IActionResult> UpdateProduct(int id, Product product)
+    public async Task<IActionResult> UpdateProduct(int id, ProductUpdateDto dto)
     {
+        Product product=new Product
+        {
+            Name=dto.Name,
+            Price=dto.Price,
+        };
+
         var updated=await _productService.UpdateProductAsync(id,product);
 
         if (!updated)
