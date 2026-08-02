@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore; 
 using Proj2.Data;
+using Proj2.Exceptions;
 using Proj2.Interfaces;
 using Proj2.Models;
 
@@ -17,6 +18,7 @@ public class ProductService: IProductService
     public async Task<List<Product>> GetAllProductsAsync()
     {
         return await _context.products.ToListAsync();
+       
     }
 
      public async Task<Product?> GetProductByIdAsync(int id)
@@ -38,7 +40,7 @@ public class ProductService: IProductService
 
         if (existingProduct == null)
         {
-            return false;
+            throw new ProductNotFoundException(id);
         }
 
         existingProduct.Name=product.Name;
@@ -49,6 +51,7 @@ public class ProductService: IProductService
 
         return true;
     }
+    
 
     public async Task<bool> DeleteProductAsync(int id)
     {
