@@ -3,12 +3,13 @@ using Proj2.Interfaces;
 using Proj2.Models;
 using Proj2.DTOS;
 using Proj2.DTOs;
+using Microsoft.AspNetCore.Authorization;
 namespace Proj2.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 
-
+[Authorize]
 public class ProductsController : ControllerBase
 {
     private readonly IProductService _productService;
@@ -56,6 +57,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPost]
+    
     public async Task<ActionResult<ProductResponseDto>> CreateProduct(ProductCreateDto dto)
     {
         Product product=new Product
