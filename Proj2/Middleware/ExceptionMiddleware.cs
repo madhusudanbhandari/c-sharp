@@ -33,11 +33,14 @@ public class ExceptionMiddleware
                 _=>StatusCodes.Status500InternalServerError
             };
 
-            var message=ex switch
-            {
-                ProductNotFoundException=>ex.Message,
-                _=> "An unexpected error occured"
-            };
+            // var message=ex switch
+            // {
+            //     ProductNotFoundException=>ex.Message,
+            //     _=> "An unexpected error occured"
+            // };\
+
+
+            var message=ex.Message;
 
             var response = new
             {

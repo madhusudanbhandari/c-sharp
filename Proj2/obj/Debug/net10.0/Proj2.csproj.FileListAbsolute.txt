@@ -124,3 +124,4 @@
 /Users/madhusudanbhandari/Desktop/c#/c-sharp/Proj2/bin/Debug/net10.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/madhusudanbhandari/Desktop/c#/c-sharp/Proj2/bin/Debug/net10.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/madhusudanbhandari/Desktop/c#/c-sharp/Proj2/bin/Debug/net10.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/madhusudanbhandari/Desktop/c#/c-sharp/Proj2/bin/Debug/net10.0/BCrypt-Net-Next.dll
