@@ -15,4 +15,7 @@ public class Product
     //Navigation Property
     public Category? Category{get;set;}
 
+    public List<CartItem> CartItems{get;set;}=new();
+    public List<OrderItem> OrderItems{get;set;}=new();
+
 }

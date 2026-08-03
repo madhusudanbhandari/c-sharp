@@ -13,4 +13,6 @@ public class User
 
     public DateTime createdAt {get;set;}=DateTime.UtcNow;
 
+    public List<CartItem> CartItems{get;set;}=new();
+    public List<Order> Orders{get;set;}=new();
 }
