@@ -137,7 +137,7 @@ namespace Ecommerce.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("Descriptipn")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
 

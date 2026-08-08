@@ -31,7 +31,7 @@ public class ProductController : ControllerBase
         var product=await _productService.GetByIdAsync(id);
 
         if(product==null)
-        return null;
+        return NotFound();
 
         return Ok(product);
     }
@@ -41,6 +41,9 @@ public class ProductController : ControllerBase
     {
         var product=await _productService.CreateAsync(dto);
 
+        if(product==null)
+        return BadRequest("Category Not Found");
+        
         return CreatedAtAction(
             nameof(GetById),
             new{id=product.Id},
@@ -59,8 +62,8 @@ public class ProductController : ControllerBase
         return Ok(product);
     }
 
-    [HttpDelete]
-    public async Task<ActionResult<ProductResponseDto>> Delete(int id)
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> Delete(int id)
     {
         var deleted=await _productService.DeleteAsync(id);
 
