@@ -21,9 +21,13 @@ public class ProductController : ControllerBase
     public async Task<ActionResult<List<ProductResponseDto>>> GetAll(
         string? search,
         int? categoryId,
-        string? sortBy)
+        string? sortBy,
+        int page=1,
+        int pageSize=10
+
+        )
     {
-        var products=await _productService.GetAllAsync(search,categoryId,sortBy);
+        var products=await _productService.GetAllAsync(search,categoryId,sortBy,page,pageSize);
 
         return Ok(products);
     }

@@ -56,7 +56,7 @@ public class ProductService : IProductService
         };
     }
 
-    public async Task<List<ProductResponseDto>> GetAllAsync(string? search,int? categoryId,string? sortBy)
+    public async Task<List<ProductResponseDto>> GetAllAsync(string? search,int? categoryId,string? sortBy,int page, int pageSize)
     {
         var query=_context.Products.AsQueryable();
 
@@ -97,6 +97,11 @@ public class ProductService : IProductService
         {
             query=query.OrderBy(p=>p.Id);
         }
+
+        
+        query=query.Skip((page-1) * pageSize)
+            .Take(pageSize);
+        
 
         return await query
         .Select(p => new ProductResponseDto
