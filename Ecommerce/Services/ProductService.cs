@@ -56,10 +56,16 @@ public class ProductService : IProductService
         };
     }
 
-    public async Task<List<ProductResponseDto>> GetAllAsync()
+    public async Task<List<ProductResponseDto>> GetAllAsync(string? search)
     {
-        return await _context.Products
-        .Include(p => p.Category)
+        var query=_context.Products.AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            query=query.Where(p=>p.Name.Contains(search));
+        }
+
+        return await query
         .Select(p => new ProductResponseDto
         {
             Id = p.Id,
