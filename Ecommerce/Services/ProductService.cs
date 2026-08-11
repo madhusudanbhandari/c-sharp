@@ -56,13 +56,46 @@ public class ProductService : IProductService
         };
     }
 
-    public async Task<List<ProductResponseDto>> GetAllAsync(string? search)
+    public async Task<List<ProductResponseDto>> GetAllAsync(string? search,int? categoryId,string? sortBy)
     {
         var query=_context.Products.AsQueryable();
 
         if (!string.IsNullOrWhiteSpace(search))
         {
             query=query.Where(p=>p.Name.Contains(search));
+        }
+
+        if(categoryId.HasValue)
+        {
+            query=query.Where(p=>p.CategoryId==categoryId.Value);
+            
+        }
+
+        if (!string.IsNullOrWhiteSpace(sortBy))
+        {
+            switch (sortBy.ToLower())
+            {
+                case "priceasc":
+                    query=query.OrderBy(p=>p.Price);
+                    break;
+
+                case "pricedesc":
+                    query=query.OrderByDescending(p=>p.Price);
+                    break;
+
+                case "name":
+                    query=query.OrderBy(p=>p.Name);
+                    break;
+                
+                default:
+                    query=query.OrderBy(p=>p.Id);
+                    break;
+            }
+        }
+
+        else
+        {
+            query=query.OrderBy(p=>p.Id);
         }
 
         return await query

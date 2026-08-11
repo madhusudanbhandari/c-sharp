@@ -4,7 +4,7 @@ namespace Ecommerce.Interfaces;
 
 public interface IProductService
 {
-    Task<List<ProductResponseDto>> GetAllAsync(string? search);
+    Task<List<ProductResponseDto>> GetAllAsync(string? search,int? categoryId,string? sortBy);
     Task<ProductResponseDto?> GetByIdAsync(int id);
     Task<ProductResponseDto?> CreateAsync(CreateProductDto dto);
 
