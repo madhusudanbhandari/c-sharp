@@ -2,6 +2,7 @@ using Ecommerce.Interfaces;
 using Ecommerce.DTOs.Product;
 using Microsoft.AspNetCore.Mvc;
 using Ecommerce.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ecommerce.Controllers;
 
@@ -17,6 +18,7 @@ public class ProductController : ControllerBase
         _productService=productService;
     }
 
+    [Authorize]
     [HttpGet]
     public async Task<ActionResult<List<ProductResponseDto>>> GetAll(
         string? search,
@@ -43,6 +45,7 @@ public class ProductController : ControllerBase
         return Ok(product);
     }
 
+    [Authorize(Roles ="Admin")]
     [HttpPost]
     public async Task<ActionResult<ProductResponseDto>> Create(CreateProductDto dto)
     {
@@ -58,6 +61,7 @@ public class ProductController : ControllerBase
         );
     }
 
+    [Authorize(Roles ="Admin")]
     [HttpPut("{id}")]
     public async Task<ActionResult<ProductResponseDto>>Update(int id, UpdateProductDto dto)
     {
@@ -69,6 +73,7 @@ public class ProductController : ControllerBase
         return Ok(product);
     }
 
+    [Authorize(Roles ="Admin")]
     [HttpDelete("{id}")]
     public async Task<ActionResult> Delete(int id)
     {

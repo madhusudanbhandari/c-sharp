@@ -5,6 +5,7 @@ using Ecommerce.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Ecommerce.Data;
 
 var builder=WebApplication.CreateBuilder(args);
 
@@ -47,7 +48,16 @@ builder.Services.AddAuthorization();
 
 var app=builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var context=scope.ServiceProvider
+    .GetRequiredService<AppDbContext>();
+
+    await DbSeeder.SeedAdminAsync(context);
+}
+
 app.UseHttpsRedirection();
 app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 app.Run();
