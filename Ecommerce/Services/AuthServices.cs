@@ -4,6 +4,12 @@ using Ecommerce.DTOs.Auth;
 using Ecommerce.Interfaces;
 using Ecommerce.Models;
 using Microsoft.EntityFrameworkCore;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.Extensions.Configuration;
+
 
 
 namespace Ecommerce.Services;
@@ -12,9 +18,49 @@ public  class AuthService : IAuthService
 {
     private readonly AppDbContext _context;
 
-    public AuthService(AppDbContext context)
+    private readonly IConfiguration _configuration;
+
+    public AuthService(AppDbContext context,IConfiguration configuration)
     {
         _context=context;
+        _configuration=configuration;
+    }
+
+
+    private string GenerateJwtToken(User user)
+    {
+        var jwt=_configuration.GetSection("Jwt");
+
+        var claims=new List<Claim>
+        {
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Name, user.Name),
+            new Claim(ClaimTypes.Email,user.Email),
+            new Claim(ClaimTypes.Role, user.Role)
+        };
+
+
+        var key=new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(jwt["Key"]!)
+        );
+
+        var credentials=new SigningCredentials(
+            key,
+            SecurityAlgorithms.HmacSha256
+        );
+
+        var token=new JwtSecurityToken(
+            issuer:jwt["Issuer"],
+            audience:jwt["Audience"],
+            claims:claims,
+            expires:DateTime.UtcNow.AddMinutes(
+                Convert.ToDouble(jwt["ExpireMinites"])
+            ),
+            signingCredentials:credentials
+
+        );
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
     }
 
     public async Task<AuthResponseDto?> RegisterAsync(RegisterDto dto)
@@ -40,7 +86,8 @@ public  class AuthService : IAuthService
 
         return new AuthResponseDto
         {
-            Token="",
+            Message="User registered successfully",
+            Token=GenerateJwtToken(user),
             Name=user.Name,
             Email=user.Email,
         };
@@ -61,7 +108,8 @@ public  class AuthService : IAuthService
 
         return new AuthResponseDto
         {
-            Token="",
+            Message="Login successful",
+            Token=GenerateJwtToken(user),
             Name=user.Name,
             Email=user.Email
         };

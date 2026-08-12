@@ -2,6 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using Ecommerce.Data;
 using Ecommerce.Services;
 using Ecommerce.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
 var builder=WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -16,6 +20,30 @@ builder.Services.AddScoped<ICategoryService,CategoryService>();
 builder.Services.AddScoped<IProductService,ProductService>();
 
 builder.Services.AddScoped<IAuthService,AuthService>();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+.AddJwtBearer(options =>
+{
+    var jwt=builder.Configuration.GetSection("Jwt");
+
+    options.TokenValidationParameters=new TokenValidationParameters
+    {
+        ValidateIssuer=true,
+        ValidateAudience=true,
+        ValidateLifetime=true,
+        ValidateIssuerSigningKey=true,
+
+        ValidIssuer=jwt["Issuer"],
+        ValidAudience=jwt["Audience"],
+
+        IssuerSigningKey=new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(jwt["Key"]!)
+        )
+    };
+    
+});
+
+builder.Services.AddAuthorization();
 
 var app=builder.Build();
 

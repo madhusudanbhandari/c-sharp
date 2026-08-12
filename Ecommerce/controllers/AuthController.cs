@@ -23,7 +23,11 @@ public class AuthController : ControllerBase
         if (response == null)
             return BadRequest("Email already exists.");
 
-        return Ok(response);
+        return Ok(new
+        {
+            Message="Registration Sucessfull",
+            Data=response
+        });
     }
 
     [HttpPost("login")]
@@ -34,6 +38,8 @@ public class AuthController : ControllerBase
         if (response == null)
             return Unauthorized("Invalid email or password.");
 
-        return Ok(response);
+        return Ok(new{
+            Message="Login Successfull",
+            Data=response});
     }
 }
