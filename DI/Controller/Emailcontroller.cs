@@ -1,3 +1,4 @@
+using DI.Interface;
 using DI.Service;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,9 +16,9 @@ public class EmailController : ControllerBase
 
 
     [HttpGet]
-    public IActionResult RegisterUser(string email)
+    public IActionResult RegisterUser(string email, [FromServices] IEmailService emailService)
     {
-        _user.RegisterUser(email);
+        _user.RegisterUser(email,emailService);
         return Ok($"User {email} registerd");
     }
 }
