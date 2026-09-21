@@ -61,3 +61,30 @@
 // {
 //     Console.WriteLine(r);
 // }
+
+// // int [] numbers=new int[10];
+
+// var numbers=new int[2];
+// numbers[0]=1;
+// numbers[1]=3;
+
+// foreach(int num in numbers)
+// {
+//     Console.WriteLine(num);
+// }
+
+
+//list
+
+// List<int> numbers=new List<int>();
+
+var list=new List<int>();
+
+list.Add(4);
+list.Add(5);
+
+
+foreach(int num in list)
+{
+    Console.WriteLine(num);
+}
