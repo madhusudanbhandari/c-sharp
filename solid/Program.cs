@@ -1,433 +1,142 @@
-//1. Single responsibility principle= a class should have only one reason to change
+//middlewares and the request pipeline
 
-// //wrong practice
+
+// var builder=WebApplication.CreateBuilder(args);
+
+// builder.Services.AddControllers();
+
+
+// var app=builder.Build();
+
+// app.UseMiddleware<RequestLoggingMiddleware>();
+
+// app.MapControllers();
+
+// app.Run();
+
+
+// app.Use(async (context, next) =>
+// {
+//     Console.WriteLine("Middleware 1: Before");
+//     await next();
+//     Console.WriteLine("Middleware 2: After");
+// });
+
+// app.Use(async (context, next) =>
+// {
+//     Console.WriteLine("Middleware 2: Before");
+//     await next();
+//     Console.WriteLine("Middleware 2: After");
+// });
+
+// app.Run(async context =>
+// {
+//     Console.WriteLine("Executed");
+
+//     await context.Response.WriteAsync("Hello");
+// });
+
+
+
+
+//ref vs out vs in
+
+
+//in normal method..it receives the copy of the value hold by variable and it cannnot change the original variable
+
+
 // namespace Hello
 // {
 //     class Program
-//     {
-//         public class Register
-//         {
-//             public void RegisterUser()
-//             {
-//                 Console.WriteLine("User registered");
-
-//                 Console.WriteLine("Email sent");
-//             }
-//         }
-
+//     {        
 //         public static void Main(string[] args)
 //         {
-//             Register register=new Register();
-//             register.RegisterUser();
-//         }
-//     }
-// }
-
-
-//right practice
-
-
-// namespace Hello
-// {
-//     class Program
-//     {
-//         public class EmployeeRepository
-//         {
-//             public void Saved(string name)
+//             void changeNumber(int number)
 //             {
-//                 Console.WriteLine($" {name} saved to database");
-//             }
-//         }
-
-//         public class EmailService
-//         {
-//             public void Send(string name)
-//             {
-//                 Console.WriteLine($"email sent to {name}");
-//             }
-//         }
-
-//         public class EmployeeService: EmployeeRepository
-//         {
-//             private readonly EmployeeRepository _repository;
-//             private readonly EmailService _service;
-
-//             public EmployeeService(EmployeeRepository repository, EmailService service)
-//             {
-//                 _repository=repository;
-//                 _service=service;
+//                 number=100;
 //             }
 
-//             public void RegisterEmployee(string name)
-//             {
-//                 _repository.Saved(name);
-//                 _service.Send(name);
-//             }
-//         }
+//             int x=10;
 
-//         public static void Main(string[] args)
-//         {
-//             EmployeeRepository repository=new EmployeeRepository();
-//             EmailService service=new EmailService();
+//             changeNumber(x);
 
-//             EmployeeService employee=new EmployeeService(repository,service);
-//             employee.RegisterEmployee("Ram");
+//             Console.WriteLine(x);
 //         }
 //     }
 // }
 
 
 
-//2.Open close==a class should be open for extension but closed for modification
-
+//ref==but ref allows the method to read the variable and change the value of the original variable
 
 // namespace Hello
 // {
 //     class Program
 //     {
-//         public class DiscountService
+//        static void Main(string[] args)
 //         {
-//             public decimal CalculateDiscount(string customerType,decimal total)
+//             void changeNumber(ref int number)
 //             {
-//                 if (customerType == "Regular")
-//                 {
-//                     return total*0.20m;
-//                 }
-//                 else if (customerType == "Normal")
-//                 {
-//                     return total*0.10m;
-//                 }
-//                 return 0;
+//                 number=100;
 //             }
+
+//             int x=10 ;
+
+//             changeNumber(ref x);
+//             Console.WriteLine(x);
+//         }
+//     }
+// };
+
+
+
+//out is basically used to return a value through the parameter
+
+// namespace Hello
+// {
+//     class Program
+//     {
+//         static void Main(string[] args)
+//         {
+//             void getValues(out int x, out int y)
+//             {
+//                 x=6;
+//                 y=7;
+//             }
+
+//             getValues(out int a,out int b);
+//             Console.WriteLine(a);
+//             Console.WriteLine(b);
 //         }
 //     }
 //}
 
 
 
-//right approach
+//in==read the original value without modifying it through the parameter
+//in makes the variable read only,cannot be modified
 
 // namespace Hello
 // {
 //     class Program
 //     {
-//         public interface DiscountStrategy
+//         static void Main(string[] args)
 //         {
-//             public decimal CalculateDiscount( decimal total);
-//         }
-
-//         public class RegularDiscount : DiscountStrategy
-//         {
-//             public decimal CalculateDiscount(decimal total)
+            
+//             void readNumber(in int x)
 //             {
-//                 return total*0.20m;
-//             }
-//         }
+//                 Console.WriteLine(x);
+//                 //x=100;  //Cannot assign to variable 'x' or use it as the right hand side of a ref assignment because it is a readonly variable
 
-//         public class NormalDiscount : DiscountStrategy
-//         {
-//             public decimal CalculateDiscount(decimal total)
-//             {
-//                 return total*0.10m;
-//             }
-//         }
-
-//         public class VipDiscount : DiscountStrategy
-//         {
-//             public decimal CalculateDiscount(decimal total)
-//             {
-//                 return total*0.30m;
-//             }
-//         }
-
-//         public static void Main(string[] args)
-//         {
-//             VipDiscount vip=new VipDiscount();
-//             var disc=vip.CalculateDiscount(4000);
-//             Console.WriteLine($"you got {disc} discount");
-
-//         }
-//     }
-// }
-
-
-
-//3.Liskov substituition p==an object of the subtype must be used where the object of the base type is expected without breaking the programs expected behaviour
-
-//wrong approach
-
-// namespace Hello
-// {
-//     class Program
-//     {
-//         public class Bird
-//         {
-//             public virtual void Fly(){
-//                 Console.WriteLine("Birds can fly");
-//             }
-//         }
-
-//         public class Sparrow:Bird
-//         {
-
-//         }
-
-//         public class Penguin : Bird
-//         {
-//             public override void Fly()
-//             {
-//                 throw new InvalidOperationException("Penguins cannot fly");
-//             }
-//         }
-
-//         public static void MakeBirdFly(Bird bird) //penguin violates this method as it cannot fly
-//         {
-//             bird.Fly();
-//         }
-
-//         public static void Main(string[] args)
-//         {
-//             Sparrow sparrow=new Sparrow();
-//             Penguin penguin=new Penguin();
-
-//             MakeBirdFly(sparrow);
-//             MakeBirdFly(penguin); 
-//         }
-//     }
-// }
-
-
-
-//Right approach
-
-// namespace Hello
-// {
-//     class Program
-//     {
-//         public interface Bird
-//         {
-//             void Eat();
-//         }
-
-//         public interface IFlyingBird
-//         {
-//             void Fly();
-//         }
-
-//         public class Sparrow:Bird, IFlyingBird
-//         {
-//             public void Eat()
-//             {
-//                 Console.WriteLine("Sparrow can eat");
 //             }
 
-//             public void Fly()
-//             {
-//                 Console.WriteLine("Sparrow can fly");
-//             }
+//             int x=10;
+
+//             readNumber(x);
+    
+    
 //         }
-
-//         public class Penguin: Bird
-//         {
-//             public void Eat()
-//             {
-//                 Console.WriteLine("Penguin can eat");
-//             }
-//         }
-
-//         public static void MakeBirdFly(IFlyingBird bird). //only the method that implement FlyingBird can be passed
-//         {
-//             bird.Fly();
-//         }
-
-//         public static void Main(string[] args)
-//         {
-//             Sparrow sparrow=new Sparrow();
-//             Penguin penguin=new Penguin();
-
-//             sparrow.Eat();
-//             penguin.Eat();
-
-
-//             MakeBirdFly(sparrow);
-
-
-//         }
-//     }
-// }
-
-
-//4. Interface segregation principle==a class/client should not be forced to depend on the methods that they donot use
-//define short and necessary interfaces that avoid creating the unnecessary implementations
-
-
-//wrong approach
-
-// namespace Hello
-// {
-//     class Program
-//     {
-//         public interface EmmployeeService //unecessary implementation of othe methods then sendEmail
-//         {
-//             public void CreateEmployee();
-//             public void DeleteEmployee();
-//             public void SendEmail();
-//             public void CalculateSalary();
-//         }
-
-//         public class EmailService : EmmployeeService
-//         {
-//             public void CreateEmployee()
-//             {
-//                 throw new NotImplementedException();
-//             }
-//             public void DeleteEmployee()
-//             {
-//                 throw new NotImplementedException();
-//             }
-
-//             public void SendEmail()
-//             {
-//                 Console.WriteLine("Email sent");
-//             }
-
-//             public void CalculateSalary()
-//             {
-//                 throw new NotImplementedException();
-//             }
-//         }
-
-//         public static void Main(string[] args)
-//         {
-//             EmailService service=new EmailService();
-//             service.SendEmail();
-//         }
-//     }
-// }
-
-
-//right approach
-
-// namespace Hello
-// {
-//     class Program
-//     {
-//         public interface EmployeeRepository
-//         {
-//             public void SaveEmployee();
-//             public void DeleteEmployee();
-
-//         }
-//         public interface CalculateSalary
-//         {
-//             public void SalaryCalculate();
-//         }
-
-//         public class EmployeeService : EmployeeRepository
-//         {
-//             public void SaveEmployee()
-//             {
-//                 Console.WriteLine("Employee saved");
-//             }
-
-//             public void DeleteEmployee()
-//             {
-//                 Console.WriteLine("Employee deleted");
-//             }
-//         }
-
-//         public class SalaryService : CalculateSalary
-//         {
-//             public void SalaryCalculate()
-//             {
-//                 Console.WriteLine("Salary calculated");
-//             }
-//         }
-
-//         public static void Main(string[] args)
-//         {
-//             SalaryService service=new SalaryService();
-//             service.SalaryCalculate();
-//         }
-//     }
-// }
-
-
-
-//5.Dependency Inversion Principle
-//high level modules should not depend on the low level modules both should depend on the abstractions and 
-//abstraction should not depend on the implementation and implementation should depend on the abstraction
-
-
-//wrong approch
-
-// namespace Hello
-// {
-//     class Program
-//     {
-//         public class EmailService
-//         {
-//             public void Send()
-//             {
-//                 Console.WriteLine("Email sent");
-//             }
-//         }
-
-//         public class EmployeeService
-//         { 
-//             private readonly EmailService _emailService=new EmailService();  //bad approach directly creates the email service
-
-//             public void RegisterEmployee()
-//             {
-//                 Console.WriteLine("Employee registered");
-
-//                 _emailService.Send();
-//             }
-//         }
-
-//         public static void Main(string[] args)
-//         {
-//             EmployeeService service=new EmployeeService();
-//             service.RegisterEmployee();
-//         }
-//     }
-// }
-
-
-//right approach
-
-// namespace Hello
-// {
-//     class Program
-//     {
-//         public interface IEmailService
-//         {
-//             void Send();
-//         }
-//         public class EmailService : IEmailService
-//         {
-//             public void Send()
-//             {
-//                 Console.WriteLine("Email sent");
-//             }
-//         }
-
-//         public class EmployeeService
-//         {
-//             private readonly IEmailService emailService=new EmailService();
-
-//             public void RegisterEmployee()
-//             {
-//                 Console.WriteLine("Employee Registered successsfully");
-
-//                 emailService.Send();
-//             }
-//         }
-
-//         public static void Main(string[] args)
-//         {
-//             EmployeeService service=new EmployeeService();
-//             service.RegisterEmployee();
-//         }
+        
+        
 //     }
 // }
