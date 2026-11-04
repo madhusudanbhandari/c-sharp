@@ -1,43 +1,51 @@
-//1.Singleton design patten==create a single instance of the class and allow a global access to it
+//Behavioural Design Patterns
+
+//1.Adapter design pattern==helps the multiple objects and classes to combine to form large,flexible structure using the adapter class
+//adapter class implements the innterface that out application expects
+//adapter helps to make the third party apis or the sdks compatible
 
 
 // namespace Hello
 // {
 //     class Program
 //     {
-//         public class AppConfiguration
+//         public interface IPaymentService //target==interface our code/client expects
 //         {
-//             private static AppConfiguration? _instance;
-
-//             private AppConfiguration()
-//             {
-
-//             }
-
-//             public static AppConfiguration Instance
-//             {
-//                 get
-//                 {
-//                     if (_instance == null)
-//                     {
-//                         _instance=new AppConfiguration();
-//                     }
-
-//                     return _instance;
-//                 }
-//             }
-
-//             public string ApplicationName{get;set;}="MyPro";
+//             public Task<bool> ProcessPayment(decimal amount);
 //         }
 
-//         public static void Main(string[] args)
+//         public class KhaltiSdk //adaptee==third party sdk that need to be made compatible 
 //         {
-//             var config1=AppConfiguration.Instance;
-//             var config2=AppConfiguration.Instance;
+//             public Task<bool> MakePayment(decimal amount)
+//             {
+//                 Console.WriteLine($"{amount} paid via khalti");
 
-//             Console.WriteLine(config1.ApplicationName);
+//                 return Task.FromResult(true);
+//             }
+//         }
 
-//             Console.WriteLine(ReferenceEquals(config1,config2));
+//         public class KhaltiAdapter : IPaymentService //adapter==helps to make the third party interface compatible
+//         {
+//             private readonly KhaltiSdk _khaltiSdk;
+
+//             public KhaltiAdapter(KhaltiSdk sdk)
+//             {
+//                 _khaltiSdk=sdk;
+//             }
+
+//             public Task<bool> ProcessPayment(decimal amount)
+//             {
+//                 return _khaltiSdk.MakePayment(amount);
+
+//             }
+//         }
+
+//         static void Main(string[] args)
+//         {
+//             KhaltiSdk sdk=new KhaltiSdk();
+//             KhaltiAdapter adapter=new KhaltiAdapter(sdk); //client==the code that expects the interface
+
+//             adapter.ProcessPayment(4000);
 //         }
 //     }
 // }
@@ -45,231 +53,60 @@
 
 
 
+//2.Decorator pattern==allows us to add the additional behaviours and responsibilities to existing object dynamically 
+//  without modifying the original class
 
-//2. Factory Design Pattern==instead of instantiating the object directly with the new keyword we delegate the responsibility of creating new object to the specialized factory method
-
-
-// namespace Hello
-// {
-//     class Program
-//     {
-//         public interface INotification
-//         {
-//          void Send(string message);
-//         }
-
-//         public class EmailNotification : INotification
-//         {
-//             public void Send(string message)
-//             {
-//                 Console.WriteLine($"Email Message:{message}");
-//             }
-//         }
-
-//         public class SmsNotification : INotification
-//         {
-//             public void Send(string message)
-//             {
-//                 Console.WriteLine($"SMS Message:{message}");
-//             }
-//         }
-
-//         public class PushNotification : INotification
-//         {
-//             public void Send(string message)
-//             {
-//                 Console.WriteLine($"Push Message:{message}");
-//             }
-//         }
-
-
-//         public class NotificationFactory
-//         {
-//             public  INotification Notification(string type)
-//             {
-//                 return type.ToLower() switch
-//                 {
-//                     "email"=> new EmailNotification(),
-//                     "sms"=>new SmsNotification(),
-//                     "push"=> new PushNotification(),
-//                     _=> throw new ArgumentException("Ivalid notification choice")
-//                 };
-//             }
-//         }
-
-//         public static void Main(string[] args)
-//         {
-//             var factory=new NotificationFactory();
-
-//             var notification=factory.Notification("sms");
-
-//             notification.Send("This is a sms");
-//         }
-//     }
-// }
-
-
-
-//3.Abstract Factory...Creates the family of the related objects
+//below we added the logging on top of the payment processing
 
 
 // namespace Hello
 // {
 //     class Program
 //     {
-//         public interface IPaymentProcessor
+//         public interface IPaymentService
 //         {
-//             void Pay(decimal amount);
+//             public Task<bool> ProcessPayment(decimal amount);
 //         }
 
-//         public interface IReceiptGenerator
+//         public class PaymentService : IPaymentService
 //         {
-//             void Generate();
-//         }
-
-//         public class EsewaPayment : IPaymentProcessor
-//         {
-//             public void Pay(decimal amount)
+//             public async Task<bool> ProcessPayment(decimal amount)
 //             {
-//                 Console.WriteLine($"{amount} payed using esewa");
-//             }
+//                 Console.WriteLine("Processing payment");
 
-//         }
+//                 await Task.Delay(5000);
 
-//         public class EsewaReceipt : IReceiptGenerator
-//         {
-//             public void Generate()
-//             {
-//                 Console.WriteLine("Receipt generated using the esewaa");
+//                 Console.WriteLine("Processed");
+
+//                 return true;
 //             }
 //         }
 
-//         public class KhaltiPayment : IPaymentProcessor
+//         public class PaymentLoggingDecorator : IPaymentService
 //         {
-//             public void Pay(decimal amount)
+//             private readonly IPaymentService _paymentService;
+//             public PaymentLoggingDecorator(IPaymentService paymentService)
 //             {
-//                 Console.WriteLine($"{amount} payed using the khalti");
+//                 _paymentService=paymentService;
+//             }
+
+//             public async Task<bool> ProcessPayment(decimal amount)
+//             {
+//                 Console.WriteLine("Payment operation started");
+
+//                 var result=await _paymentService.ProcessPayment(amount);
+
+//                 Console.WriteLine("Payment operation completed");
+
+//                 return result;
 //             }
 //         }
 
-//         public class KhaltiReceipt : IReceiptGenerator
+//         static async Task Main(string[] args)
 //         {
-//             public void Generate()
-//             {
-//                 Console.WriteLine("Generated using the khalti");
-//             }
-//         }
-
-//         public interface IPaymentFactory
-//         {
-//             IPaymentProcessor CreatePaymentProcessor();
-//             IReceiptGenerator CreateReceiptGenerator();
-//         }
-
-//         public class EsewaFactory : IPaymentFactory
-//         {
-//             public IPaymentProcessor CreatePaymentProcessor()
-//             {
-//                 return new EsewaPayment();
-//             }
-
-//             public IReceiptGenerator CreateReceiptGenerator()
-//             {
-//                 return new EsewaReceipt();
-//             }
-//         }
-
-//         public class KhaltiFactory : IPaymentFactory
-//         {
-//             public IPaymentProcessor CreatePaymentProcessor()
-//             {
-//                 return new KhaltiPayment();
-//             }
-
-//             public IReceiptGenerator CreateReceiptGenerator()
-//             {
-//                 return new KhaltiReceipt();
-//             }
-
-//         }
-
-
-//         public static void Main(string[] args)
-//         {
-//             IPaymentFactory paymentFactory=new EsewaFactory();
-//             IPaymentFactory paymentFactory1=new KhaltiFactory();
-
-//             var payment=paymentFactory.CreatePaymentProcessor();
-//             var receipt=paymentFactory.CreateReceiptGenerator();
-
-//             var payment1=paymentFactory1.CreatePaymentProcessor();
-//             var receipt1=paymentFactory1.CreateReceiptGenerator();
-
-//             payment.Pay(500);
-
-//             receipt.Generate();
-
-
-//             payment1.Pay(1000);
-//             receipt1.Generate();
-//         }
-//     }
-// }
-
-
-
-
-//4. Builer Design Pattern====instead of creating the entire complicated object at once...we have to create the object one by one
-
-// namespace Hello
-// {
-//     class Program
-//     {
-//         public class Employee
-//         {
-//             public string Name{get;set;}="";
-//             public string Email{get;set;}="";
-//             public int Age{get;set;}
-//         }
-
-//         public class EmployeeBuilder
-//         {
-//             private Employee _employee=new Employee();
-
-//             public EmployeeBuilder SetName(string name)
-//             {
-//                 _employee.Name=name;
-//                 return this;
-//             }
-
-//             public EmployeeBuilder SetEmail(string email)
-//             {
-//                 _employee.Email=email;
-//                 return this;
-//             }
-            
-//             public EmployeeBuilder SetAge(int age)
-//             {
-//                 _employee.Age=age;
-//                 return this;
-//             }
-
-//             public Employee Build(){
-//                 return _employee;
-//             }
-//         }
-
-//         public static void Main(string[] args)
-//         {
-//             var employee=new EmployeeBuilder()
-//                         .SetName("Ram")
-//                         .SetEmail("ram@gmil.com")
-//                         .SetAge(22)
-//                         .Build();
-
-
-//             Console.WriteLine(employee.Name);
-//             Console.WriteLine(employee.Age);
+//             IPaymentService payment=new PaymentService();
+//             payment=new PaymentLoggingDecorator(payment);
+//             await payment.ProcessPayment(5000);
 //         }
 //     }
 // }
