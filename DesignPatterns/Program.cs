@@ -1,112 +1,155 @@
-//Behavioural Design Patterns
+//Behaviourl Design Pattern==specifies how different object interact or communicate with each other
 
-//1.Adapter design pattern==helps the multiple objects and classes to combine to form large,flexible structure using the adapter class
-//adapter class implements the innterface that out application expects
-//adapter helps to make the third party apis or the sdks compatible
+//1.Strategy patterns
+//Instead of putting all the algorithns inside the same class and using the conditional statements it basically creates
+//separate classes for each algorithm and decides which to execute at runtime
 
-
-// namespace Hello
-// {
-//     class Program
-//     {
-//         public interface IPaymentService //target==interface our code/client expects
-//         {
-//             public Task<bool> ProcessPayment(decimal amount);
-//         }
-
-//         public class KhaltiSdk //adaptee==third party sdk that need to be made compatible 
-//         {
-//             public Task<bool> MakePayment(decimal amount)
-//             {
-//                 Console.WriteLine($"{amount} paid via khalti");
-
-//                 return Task.FromResult(true);
-//             }
-//         }
-
-//         public class KhaltiAdapter : IPaymentService //adapter==helps to make the third party interface compatible
-//         {
-//             private readonly KhaltiSdk _khaltiSdk;
-
-//             public KhaltiAdapter(KhaltiSdk sdk)
-//             {
-//                 _khaltiSdk=sdk;
-//             }
-
-//             public Task<bool> ProcessPayment(decimal amount)
-//             {
-//                 return _khaltiSdk.MakePayment(amount);
-
-//             }
-//         }
-
-//         static void Main(string[] args)
-//         {
-//             KhaltiSdk sdk=new KhaltiSdk();
-//             KhaltiAdapter adapter=new KhaltiAdapter(sdk); //client==the code that expects the interface
-
-//             adapter.ProcessPayment(4000);
-//         }
-//     }
-// }
-
-
-
-
-//2.Decorator pattern==allows us to add the additional behaviours and responsibilities to existing object dynamically 
-//  without modifying the original class
-
-//below we added the logging on top of the payment processing
+//it has three components
+//1.Strategy==common algorithm interface
+//2.concrete strategy==specific algorithm implementation
+//3.context==uses a selected strategy
 
 
 // namespace Hello
 // {
 //     class Program
 //     {
-//         public interface IPaymentService
+//         public interface IPaymentStrategy //Strategy
 //         {
 //             public Task<bool> ProcessPayment(decimal amount);
 //         }
 
-//         public class PaymentService : IPaymentService
+//         public class EsewaStrategy : IPaymentStrategy //concrete strategy
 //         {
 //             public async Task<bool> ProcessPayment(decimal amount)
 //             {
-//                 Console.WriteLine("Processing payment");
+//                 Console.WriteLine($"{amount} processing via esewa");
 
-//                 await Task.Delay(5000);
-
-//                 Console.WriteLine("Processed");
-
+//                 await Task.Delay(3000);
+//                 Console.WriteLine("Complete");
 //                 return true;
 //             }
 //         }
 
-//         public class PaymentLoggingDecorator : IPaymentService
-//         {
-//             private readonly IPaymentService _paymentService;
-//             public PaymentLoggingDecorator(IPaymentService paymentService)
-//             {
-//                 _paymentService=paymentService;
-//             }
 
+//         public class KhaltiStrategy : IPaymentStrategy //concrete strategy
+//         {
 //             public async Task<bool> ProcessPayment(decimal amount)
 //             {
-//                 Console.WriteLine("Payment operation started");
+//                 Console.WriteLine($"{amount} processing via khalti");
 
-//                 var result=await _paymentService.ProcessPayment(amount);
+//                 await Task.Delay(3000);
+//                 Console.WriteLine("Complete");
+//                 return true;
+//             }
+//         }
 
-//                 Console.WriteLine("Payment operation completed");
+//         public class PaymentService //context
+//         {
+//             private readonly IPaymentStrategy _paymentStrategy;
 
-//                 return result;
+//             public PaymentService(IPaymentStrategy paymentStrategy)
+//             {
+//                 _paymentStrategy=paymentStrategy;
+//             }
+
+//             public async Task<bool> Pay(decimal amount)
+//             {
+//                 return await _paymentStrategy.ProcessPayment(amount);
 //             }
 //         }
 
 //         static async Task Main(string[] args)
 //         {
-//             IPaymentService payment=new PaymentService();
-//             payment=new PaymentLoggingDecorator(payment);
-//             await payment.ProcessPayment(5000);
+//             IPaymentStrategy strategy=new KhaltiStrategy();
+
+//             PaymentService service=new PaymentService(strategy);
+
+//             await service.Pay(5000);
 //         }
 //     }
 // }
+
+
+//2.Observer pattern
+//defines ont-to-many relation between objects
+//whenever an object changes state or publishes the event all the registered obeservers are notified automatically...
+//publisher==maintains the observer and notifies them
+//subscriber===listens to notifications and responds
+
+namespace Hello
+{
+    class Program
+    {
+        public class Student
+        {
+            public int Id{get;set;}
+            public string Name{get;set;}=string.Empty;
+        }
+
+        public interface IEnrollmentObserver
+        {
+            public Task UpdateAsync(Student student);
+        }
+
+        public class EmailObserver : IEnrollmentObserver
+        {
+            public async Task UpdateAsync(Student student)
+            {
+                await Task.Delay(3000);
+                Console.WriteLine($"Email sent to {student.Name}");
+            }
+        }
+
+        public class NotificationObserver : IEnrollmentObserver
+        {
+            public async Task UpdateAsync(Student student)
+            {
+                await Task.Delay(3000);
+                Console.WriteLine($"Notification sent to {student.Name}");
+            }
+        }
+
+        public class EnrollmentPublisher
+        {
+            private readonly List<IEnrollmentObserver> _observers=new();
+
+            public void Subscribe(IEnrollmentObserver observer)
+            {
+                _observers.Add(observer);
+            }
+
+            public void Unsubscribe(IEnrollmentObserver observer)
+            {
+                _observers.Remove(observer);
+            }
+
+            public async Task Notify(Student student)
+            {
+                foreach(var observer in _observers)
+                {
+                    await observer.UpdateAsync(student);
+                }
+            }
+        }
+
+        static async Task Main(string[] args)
+        {
+            EnrollmentPublisher publisher=new EnrollmentPublisher();
+
+            var email=new EmailObserver();
+            var notification=new NotificationObserver();
+
+            publisher.Subscribe(email);
+            publisher.Subscribe(notification);
+
+            var student=new Student
+            {
+                Id=1,
+                Name="Madhusudan"
+            };
+
+            await publisher.Notify(student);
+        }
+    }
+}
