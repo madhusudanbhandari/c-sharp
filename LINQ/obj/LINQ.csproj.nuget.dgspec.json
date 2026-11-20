@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/madhusudanbhandari/Desktop/c#/c-sharp/LINQ/LINQ.csproj": {}
+    "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/LINQ/LINQ.csproj": {}
   },
   "projects": {
-    "/Users/madhusudanbhandari/Desktop/c#/c-sharp/LINQ/LINQ.csproj": {
+    "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/LINQ/LINQ.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/madhusudanbhandari/Desktop/c#/c-sharp/LINQ/LINQ.csproj",
+        "projectUniqueName": "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/LINQ/LINQ.csproj",
         "projectName": "LINQ",
-        "projectPath": "/Users/madhusudanbhandari/Desktop/c#/c-sharp/LINQ/LINQ.csproj",
+        "projectPath": "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/LINQ/LINQ.csproj",
         "packagesPath": "/Users/madhusudanbhandari/.nuget/packages/",
-        "outputPath": "/Users/madhusudanbhandari/Desktop/c#/c-sharp/LINQ/obj/",
+        "outputPath": "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/LINQ/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/madhusudanbhandari/.nuget/NuGet/NuGet.Config"

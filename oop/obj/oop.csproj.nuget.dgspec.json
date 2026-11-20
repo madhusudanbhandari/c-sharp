@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/madhusudanbhandari/Desktop/c#/c-sharp/oop/oop.csproj": {}
+    "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/oop/oop.csproj": {}
   },
   "projects": {
-    "/Users/madhusudanbhandari/Desktop/c#/c-sharp/oop/oop.csproj": {
+    "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/oop/oop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/madhusudanbhandari/Desktop/c#/c-sharp/oop/oop.csproj",
+        "projectUniqueName": "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/oop/oop.csproj",
         "projectName": "oop",
-        "projectPath": "/Users/madhusudanbhandari/Desktop/c#/c-sharp/oop/oop.csproj",
+        "projectPath": "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/oop/oop.csproj",
         "packagesPath": "/Users/madhusudanbhandari/.nuget/packages/",
-        "outputPath": "/Users/madhusudanbhandari/Desktop/c#/c-sharp/oop/obj/",
+        "outputPath": "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/oop/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/madhusudanbhandari/.nuget/NuGet/NuGet.Config"

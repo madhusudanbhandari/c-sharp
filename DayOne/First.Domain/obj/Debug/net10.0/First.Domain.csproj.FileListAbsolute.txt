@@ -1,0 +1,11 @@
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Domain/bin/Debug/net10.0/First.Domain.deps.json
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Domain/bin/Debug/net10.0/First.Domain.dll
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Domain/bin/Debug/net10.0/First.Domain.pdb
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Domain/obj/Debug/net10.0/First.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Domain/obj/Debug/net10.0/First.Domain.AssemblyInfoInputs.cache
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Domain/obj/Debug/net10.0/First.Domain.AssemblyInfo.cs
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Domain/obj/Debug/net10.0/First.Domain.csproj.CoreCompileInputs.cache
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Domain/obj/Debug/net10.0/First.Domain.dll
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Domain/obj/Debug/net10.0/refint/First.Domain.dll
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Domain/obj/Debug/net10.0/First.Domain.pdb
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Domain/obj/Debug/net10.0/ref/First.Domain.dll

@@ -1,0 +1,28 @@
+2026-11-20 17:47:33.446 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-20 17:47:33.509 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-20 17:47:33.510 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-20 17:47:33.510 +05:45 [INF] Hosting environment: Development
+2026-11-20 17:47:33.510 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Api
+2026-11-20 17:48:09.398 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-20 17:48:09.443 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 45.9026ms
+2026-11-20 17:48:09.848 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-20 17:48:09.848 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-20 17:48:09.849 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-20 17:48:09.850 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-20 17:48:09.850 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 2.1252ms
+2026-11-20 17:48:09.856 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 8.5815ms
+2026-11-20 17:48:09.857 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-20 17:48:09.856 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 6.8478ms
+2026-11-20 17:48:09.857 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 6.9944ms
+2026-11-20 17:48:09.863 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 5.9798ms
+2026-11-20 17:48:09.946 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-20 17:48:10.008 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 61.6164ms
+2026-11-20 17:48:28.638 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 59
+2026-11-20 17:48:28.667 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-20 17:48:28.684 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-20 17:48:28.724 +05:45 [INF] LoginUser method called with email: karan@gmail.com
+2026-11-20 17:48:28.835 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-20 17:48:28.838 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 153.6591ms
+2026-11-20 17:48:28.839 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-20 17:48:28.839 +05:45 [INF] HTTP POST /api/User/login responded 200 in 196.4481 ms
+2026-11-20 17:48:28.840 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 200 null application/json; charset=utf-8 201.7382ms

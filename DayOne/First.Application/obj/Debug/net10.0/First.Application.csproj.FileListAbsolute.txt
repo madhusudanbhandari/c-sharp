@@ -1,0 +1,15 @@
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/bin/Debug/net10.0/First.Application.deps.json
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/bin/Debug/net10.0/First.Application.dll
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/bin/Debug/net10.0/First.Application.pdb
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/obj/Debug/net10.0/First.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/obj/Debug/net10.0/First.Application.AssemblyInfoInputs.cache
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/obj/Debug/net10.0/First.Application.AssemblyInfo.cs
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/obj/Debug/net10.0/First.Application.csproj.CoreCompileInputs.cache
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/obj/Debug/net10.0/First.Application.dll
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/obj/Debug/net10.0/refint/First.Application.dll
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/obj/Debug/net10.0/First.Application.pdb
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/obj/Debug/net10.0/ref/First.Application.dll
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/obj/Debug/net10.0/First.Application.csproj.AssemblyReference.cache
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/bin/Debug/net10.0/First.Domain.dll
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/bin/Debug/net10.0/First.Domain.pdb
+/Users/madhusudanbhandari/Desktop/Ofc/DayOne/First.Application/obj/Debug/net10.0/First.Ap.C619DFC9.Up2Date
