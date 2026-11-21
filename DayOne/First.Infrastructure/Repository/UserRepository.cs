@@ -95,7 +95,7 @@ public class UserRepository : IUserRepository
         parameters.Add("@UserId",UserId);
         parameters.Add("@Role",Role);
 
-         await _connection.ExecuteAsync(sql,parameters);
+        await _connection.ExecuteAsync(sql,parameters);
     }
 
     public async Task<UserRole> GetUserRole(int userId)
