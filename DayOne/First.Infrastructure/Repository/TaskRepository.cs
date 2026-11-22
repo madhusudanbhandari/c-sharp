@@ -28,15 +28,16 @@ public class TaskRepository:ITaskRepository
 
         parameters.Add("@Id",id);
 
-        return await _connection.QueryFirstOrDefaultAsync(sql,parameters);
+        return await _connection.QueryFirstOrDefaultAsync<Tasks>(sql,parameters);
     }
 
     public async Task UpdateTask(int id,UpdateTaskDto dto)
     {
-        const string sql="UPDATE Tasks SET Title=@Title, Description=@Description, Status=@Status, AssignedTo=@AssignedTo";
+        const string sql="UPDATE Tasks SET Title=@Title, Description=@Description, Status=@Status, AssignedTo=@AssignedTo WHERE Id=@Id";
 
         var parameters=new DynamicParameters();
-        parameters.Add("@Name",dto.Title);
+        parameters.Add("@Id",id);
+        parameters.Add("@Title",dto.Title);
         parameters.Add("@Description",dto.Description);
         parameters.Add("@Status",dto.Status);
         parameters.Add("@AssignedTo",dto.AssignedTo);
@@ -46,10 +47,21 @@ public class TaskRepository:ITaskRepository
 
     public async Task DeleteTask(int id)
     {
-        const string sql="DELETE *FROM Tasks WHERE Id=@Id";
+        const string sql="DELETE FROM Tasks WHERE Id=@Id";
 
         var parameters=new DynamicParameters();
         parameters.Add("@Id",id);
         await _connection.ExecuteAsync(sql,parameters);
+    }
+
+    public async Task<IEnumerable<Tasks>> GetUsersTasks(int userId)
+    {
+        const string sql="SELECT *FROM Tasks WHERE AssignedTo=@AssignedTo";
+
+        var parameter=new DynamicParameters();
+
+        parameter.Add("@AssignedTo",userId);
+
+        return await _connection.QueryAsync<Tasks>(sql,parameter);
     }
 }

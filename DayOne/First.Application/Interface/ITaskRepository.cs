@@ -9,4 +9,7 @@ public interface ITaskRepository
     public Task<Tasks?> GetTaskById(int id);
     public Task UpdateTask(int id, UpdateTaskDto dto);
     public Task DeleteTask(int id);
+
+    public Task<IEnumerable<Tasks>> GetUsersTasks(int userId);
+    
 }

@@ -61,7 +61,7 @@ public class TaskService:ITaskService
 
         await _taskRepository.UpdateTask(newtask.Id,dto);
 
-                return new ViewTaskDto
+        return new ViewTaskDto
         {
             Title=newtask.Title,
             Description=newtask.Description,
@@ -80,5 +80,32 @@ public class TaskService:ITaskService
         return "Task deleted successfully";
     }
 
+
+    public async Task<List<ViewTaskDto>> GetMyTasks(int userId)
+    {
+        var task=await _taskRepository.GetUsersTasks(userId);
+
+        if (task == null)
+        {
+            throw new Exception("Cannot find the tasks");
+        }
+
+        return task.Select(task=>new ViewTaskDto
+        {
+            Title=task.Title,
+            Description=task.Description,
+            Status=task.Status,
+            AssignedTo=task.AssignedTo
+        }).ToList();
+
+        // return new ViewTaskDto
+        // {
+        //     Title=task.Title,
+        //     Description=task.Description,
+        //     Status=task.Status,
+        //     AssignedTo=task.AssignedTo
+        // };
+        
+    }
 
 }

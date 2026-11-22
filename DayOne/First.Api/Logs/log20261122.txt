@@ -1,0 +1,486 @@
+2026-11-22 09:11:24.768 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-22 09:11:24.830 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-22 09:11:24.832 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-22 09:11:24.832 +05:45 [INF] Hosting environment: Development
+2026-11-22 09:11:24.832 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-22 09:11:32.706 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-22 09:11:32.750 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 304 null null 44.4538ms
+2026-11-22 09:11:32.751 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-22 09:11:32.751 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-22 09:11:32.751 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-22 09:11:32.752 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 0.5917ms
+2026-11-22 09:11:32.752 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-22 09:11:32.752 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-22 09:11:32.755 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 4.021ms
+2026-11-22 09:11:32.755 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 3.9232ms
+2026-11-22 09:11:32.755 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 3.8002ms
+2026-11-22 09:11:32.758 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 6.4741ms
+2026-11-22 09:11:32.820 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-22 09:11:32.865 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.0964ms
+2026-11-22 09:32:06.562 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-22 09:32:06.575 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 13.5048ms
+2026-11-22 09:32:06.878 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-22 09:32:06.879 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 0.7368ms
+2026-11-22 09:32:06.880 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-22 09:32:06.880 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-22 09:32:06.881 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 0.208ms
+2026-11-22 09:32:06.881 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-22 09:32:06.881 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 0.4839ms
+2026-11-22 09:32:06.881 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-22 09:32:06.881 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 0.2994ms
+2026-11-22 09:32:06.881 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 0.2985ms
+2026-11-22 09:32:06.957 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-22 09:32:06.968 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.6083ms
+2026-11-22 09:32:31.092 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/Task/add-task - application/json 99
+2026-11-22 09:32:31.122 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.AddTask (First.Api)'
+2026-11-22 09:32:31.134 +05:45 [INF] Route matched with {action = "AddTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddTask(First.Application.Dtos.AddTaskDto) on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 09:32:31.292 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewTaskDto'.
+2026-11-22 09:32:31.296 +05:45 [INF] Executed action First.Api.Controller.TaskController.AddTask (First.Api) in 160.7733ms
+2026-11-22 09:32:31.296 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.AddTask (First.Api)'
+2026-11-22 09:32:31.297 +05:45 [INF] HTTP POST /api/Task/add-task responded 200 in 200.7203 ms
+2026-11-22 09:32:31.298 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/Task/add-task - 200 null application/json; charset=utf-8 206.0074ms
+2026-11-22 09:33:01.492 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/view-task?id=1 - null null
+2026-11-22 09:33:01.497 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.ViewTask (First.Api)'
+2026-11-22 09:33:01.501 +05:45 [INF] Route matched with {action = "ViewTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewTask(Int32) on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 09:33:01.543 +05:45 [INF] Executed action First.Api.Controller.TaskController.ViewTask (First.Api) in 41.4295ms
+2026-11-22 09:33:01.543 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.ViewTask (First.Api)'
+2026-11-22 09:33:01.543 +05:45 [ERR] HTTP GET /api/Task/view-task responded 500 in 47.2545 ms
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'First.Domain.Entities.Tasks'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at First.Infrastructure.Repository.TaskRepository.GetTaskById(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TaskRepository.cs:line 31
+   at First.Application.Services.TaskService.ViewTaskById(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/TaskService.cs:line 38
+   at First.Api.Controller.TaskController.ViewTask(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/TaskController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-22 09:33:01.552 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'First.Domain.Entities.Tasks'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at First.Infrastructure.Repository.TaskRepository.GetTaskById(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TaskRepository.cs:line 31
+   at First.Application.Services.TaskService.ViewTaskById(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/TaskService.cs:line 38
+   at First.Api.Controller.TaskController.ViewTask(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/TaskController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-22 09:33:01.554 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/view-task?id=1 - 500 null text/plain; charset=utf-8 61.8038ms
+2026-11-22 09:34:54.107 +05:45 [INF] Application is shutting down...
+2026-11-22 09:35:00.484 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-22 09:35:00.527 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-22 09:35:00.528 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-22 09:35:00.528 +05:45 [INF] Hosting environment: Development
+2026-11-22 09:35:00.528 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-22 09:35:11.282 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/view-task?id=1 - null null
+2026-11-22 09:35:11.309 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.ViewTask (First.Api)'
+2026-11-22 09:35:11.316 +05:45 [INF] Route matched with {action = "ViewTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewTask(Int32) on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 09:35:11.423 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewTaskDto'.
+2026-11-22 09:35:11.440 +05:45 [INF] Executed action First.Api.Controller.TaskController.ViewTask (First.Api) in 122.4996ms
+2026-11-22 09:35:11.440 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.ViewTask (First.Api)'
+2026-11-22 09:35:11.441 +05:45 [INF] HTTP GET /api/Task/view-task responded 200 in 142.4509 ms
+2026-11-22 09:35:11.442 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/view-task?id=1 - 200 null application/json; charset=utf-8 160.5654ms
+2026-11-22 09:35:18.516 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/view-task?id=2 - null null
+2026-11-22 09:35:18.520 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.ViewTask (First.Api)'
+2026-11-22 09:35:18.521 +05:45 [INF] Route matched with {action = "ViewTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewTask(Int32) on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 09:35:18.528 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewTaskDto'.
+2026-11-22 09:35:18.529 +05:45 [INF] Executed action First.Api.Controller.TaskController.ViewTask (First.Api) in 8.2682ms
+2026-11-22 09:35:18.529 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.ViewTask (First.Api)'
+2026-11-22 09:35:18.529 +05:45 [INF] HTTP GET /api/Task/view-task responded 200 in 10.2603 ms
+2026-11-22 09:35:18.530 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/view-task?id=2 - 200 null application/json; charset=utf-8 14.4215ms
+2026-11-22 09:35:49.574 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Task/update-task?id=1 - application/json 110
+2026-11-22 09:35:49.579 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.UpdateTask (First.Api)'
+2026-11-22 09:35:49.585 +05:45 [INF] Route matched with {action = "UpdateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateTask(Int32, First.Application.Dtos.UpdateTaskDto) on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 09:35:49.637 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewTaskDto'.
+2026-11-22 09:35:49.637 +05:45 [INF] Executed action First.Api.Controller.TaskController.UpdateTask (First.Api) in 52.2634ms
+2026-11-22 09:35:49.637 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.UpdateTask (First.Api)'
+2026-11-22 09:35:49.637 +05:45 [INF] HTTP PATCH /api/Task/update-task responded 200 in 61.0768 ms
+2026-11-22 09:35:49.638 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Task/update-task?id=1 - 200 null application/json; charset=utf-8 63.495ms
+2026-11-22 09:36:55.245 +05:45 [INF] Application is shutting down...
+2026-11-22 09:36:58.921 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-22 09:36:58.963 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-22 09:36:58.964 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-22 09:36:58.964 +05:45 [INF] Hosting environment: Development
+2026-11-22 09:36:58.964 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-22 09:37:28.221 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Task/update-task?id=1 - application/json 91
+2026-11-22 09:37:28.250 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.UpdateTask (First.Api)'
+2026-11-22 09:37:28.258 +05:45 [INF] Route matched with {action = "UpdateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateTask(Int32, First.Application.Dtos.UpdateTaskDto) on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 09:37:28.305 +05:45 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-11-22 09:37:28.316 +05:45 [INF] Executed action First.Api.Controller.TaskController.UpdateTask (First.Api) in 56.2474ms
+2026-11-22 09:37:28.316 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.UpdateTask (First.Api)'
+2026-11-22 09:37:28.317 +05:45 [INF] HTTP PATCH /api/Task/update-task responded 400 in 78.9486 ms
+2026-11-22 09:37:28.318 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Task/update-task?id=1 - 400 null application/problem+json; charset=utf-8 98.7847ms
+2026-11-22 09:37:43.935 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Task/update-task?id=1 - application/json 92
+2026-11-22 09:37:43.940 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.UpdateTask (First.Api)'
+2026-11-22 09:37:43.941 +05:45 [INF] Route matched with {action = "UpdateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateTask(Int32, First.Application.Dtos.UpdateTaskDto) on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 09:37:44.086 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewTaskDto'.
+2026-11-22 09:37:44.087 +05:45 [INF] Executed action First.Api.Controller.TaskController.UpdateTask (First.Api) in 145.9207ms
+2026-11-22 09:37:44.088 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.UpdateTask (First.Api)'
+2026-11-22 09:37:44.088 +05:45 [INF] HTTP PATCH /api/Task/update-task responded 200 in 148.3132 ms
+2026-11-22 09:37:44.088 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Task/update-task?id=1 - 200 null application/json; charset=utf-8 153.486ms
+2026-11-22 09:37:55.553 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Task/update-task?id=1 - application/json 92
+2026-11-22 09:37:55.558 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.UpdateTask (First.Api)'
+2026-11-22 09:37:55.558 +05:45 [INF] Route matched with {action = "UpdateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateTask(Int32, First.Application.Dtos.UpdateTaskDto) on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 09:37:55.568 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewTaskDto'.
+2026-11-22 09:37:55.568 +05:45 [INF] Executed action First.Api.Controller.TaskController.UpdateTask (First.Api) in 9.8507ms
+2026-11-22 09:37:55.568 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.UpdateTask (First.Api)'
+2026-11-22 09:37:55.568 +05:45 [INF] HTTP PATCH /api/Task/update-task responded 200 in 13.7880 ms
+2026-11-22 09:37:55.568 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Task/update-task?id=1 - 200 null application/json; charset=utf-8 14.8806ms
+2026-11-22 09:38:11.187 +05:45 [INF] Request starting HTTP/1.1 DELETE http://localhost:5187/api/Task/delete-task?id=2 - null 0
+2026-11-22 09:38:11.188 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.DeleteTask (First.Api)'
+2026-11-22 09:38:11.195 +05:45 [INF] Route matched with {action = "DeleteTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteTask(Int32) on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 09:38:11.207 +05:45 [INF] Executed action First.Api.Controller.TaskController.DeleteTask (First.Api) in 11.6225ms
+2026-11-22 09:38:11.207 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.DeleteTask (First.Api)'
+2026-11-22 09:38:11.207 +05:45 [ERR] HTTP DELETE /api/Task/delete-task responded 500 in 19.1866 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.TaskRepository.DeleteTask(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TaskRepository.cs:line 54
+   at First.Application.Services.TaskService.DeleteTask(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/TaskService.cs:line 78
+   at First.Api.Controller.TaskController.DeleteTask(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/TaskController.cs:line 43
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:707f7c35-8cc5-4b6d-8aff-9cb2478d068a
+Error Number:102,State:1,Class:15
+2026-11-22 09:38:11.226 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.TaskRepository.DeleteTask(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TaskRepository.cs:line 54
+   at First.Application.Services.TaskService.DeleteTask(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/TaskService.cs:line 78
+   at First.Api.Controller.TaskController.DeleteTask(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/TaskController.cs:line 43
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:707f7c35-8cc5-4b6d-8aff-9cb2478d068a
+Error Number:102,State:1,Class:15
+2026-11-22 09:38:11.230 +05:45 [INF] Request finished HTTP/1.1 DELETE http://localhost:5187/api/Task/delete-task?id=2 - 500 null text/plain; charset=utf-8 43.2226ms
+2026-11-22 09:38:23.536 +05:45 [INF] Application is shutting down...
+2026-11-22 09:38:26.354 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-22 09:38:26.404 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-22 09:38:26.405 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-22 09:38:26.406 +05:45 [INF] Hosting environment: Development
+2026-11-22 09:38:26.406 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-22 09:38:28.551 +05:45 [INF] Request starting HTTP/1.1 DELETE http://localhost:5187/api/Task/delete-task?id=2 - null 0
+2026-11-22 09:38:28.575 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.DeleteTask (First.Api)'
+2026-11-22 09:38:28.582 +05:45 [INF] Route matched with {action = "DeleteTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteTask(Int32) on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 09:38:28.700 +05:45 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-11-22 09:38:28.702 +05:45 [INF] Executed action First.Api.Controller.TaskController.DeleteTask (First.Api) in 118.5472ms
+2026-11-22 09:38:28.702 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.DeleteTask (First.Api)'
+2026-11-22 09:38:28.703 +05:45 [INF] HTTP DELETE /api/Task/delete-task responded 200 in 135.5454 ms
+2026-11-22 09:38:28.703 +05:45 [INF] Request finished HTTP/1.1 DELETE http://localhost:5187/api/Task/delete-task?id=2 - 200 null text/plain; charset=utf-8 153.6206ms
+2026-11-22 18:14:23.863 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-22 18:14:23.914 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 52.4005ms
+2026-11-22 18:14:24.280 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-22 18:14:24.283 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-22 18:14:24.283 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-22 18:14:24.283 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-22 18:14:24.283 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-22 18:14:24.283 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 0.7869ms
+2026-11-22 18:14:24.286 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 6.2072ms
+2026-11-22 18:14:24.286 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 2.9928ms
+2026-11-22 18:14:24.286 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 3.1778ms
+2026-11-22 18:14:24.291 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 7.3987ms
+2026-11-22 18:14:24.379 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-22 18:14:24.443 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 63.9251ms
+2026-11-22 18:15:45.677 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/Task/add-task - application/json 113
+2026-11-22 18:15:45.681 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.AddTask (First.Api)'
+2026-11-22 18:15:45.687 +05:45 [INF] Route matched with {action = "AddTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddTask(First.Application.Dtos.AddTaskDto) on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 18:15:45.749 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewTaskDto'.
+2026-11-22 18:15:45.753 +05:45 [INF] Executed action First.Api.Controller.TaskController.AddTask (First.Api) in 65.9013ms
+2026-11-22 18:15:45.753 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.AddTask (First.Api)'
+2026-11-22 18:15:45.753 +05:45 [INF] HTTP POST /api/Task/add-task responded 200 in 73.5270 ms
+2026-11-22 18:15:45.754 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/Task/add-task - 200 null application/json; charset=utf-8 76.5406ms
+2026-11-22 18:16:12.922 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/Task/add-task - application/json 111
+2026-11-22 18:16:12.926 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.AddTask (First.Api)'
+2026-11-22 18:16:12.926 +05:45 [INF] Route matched with {action = "AddTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddTask(First.Application.Dtos.AddTaskDto) on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 18:16:12.935 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewTaskDto'.
+2026-11-22 18:16:12.935 +05:45 [INF] Executed action First.Api.Controller.TaskController.AddTask (First.Api) in 9.2687ms
+2026-11-22 18:16:12.936 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.AddTask (First.Api)'
+2026-11-22 18:16:12.936 +05:45 [INF] HTTP POST /api/Task/add-task responded 200 in 13.4806 ms
+2026-11-22 18:16:12.936 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/Task/add-task - 200 null application/json; charset=utf-8 14.1329ms
+2026-11-22 18:17:46.881 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-22 18:17:46.885 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 4.202ms
+2026-11-22 18:17:46.888 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-22 18:17:46.888 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 0.34ms
+2026-11-22 18:17:46.889 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-22 18:17:46.889 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-22 18:17:46.890 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 0.3234ms
+2026-11-22 18:17:46.890 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-22 18:17:46.890 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 0.1387ms
+2026-11-22 18:17:46.890 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 0.2806ms
+2026-11-22 18:17:46.890 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-22 18:17:46.890 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 0.1462ms
+2026-11-22 18:17:46.944 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-22 18:17:46.950 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.3904ms
+2026-11-22 18:27:44.658 +05:45 [INF] Application is shutting down...
+2026-11-22 18:27:57.130 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-22 18:27:57.173 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-22 18:27:57.174 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-22 18:27:57.174 +05:45 [INF] Hosting environment: Development
+2026-11-22 18:27:57.174 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-22 18:28:03.073 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-22 18:28:03.121 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 48.2074ms
+2026-11-22 18:28:03.514 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-22 18:28:03.514 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-22 18:28:03.514 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-22 18:28:03.515 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-22 18:28:03.515 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-22 18:28:03.515 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 1.8484ms
+2026-11-22 18:28:03.519 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 4.9556ms
+2026-11-22 18:28:03.519 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 4.9298ms
+2026-11-22 18:28:03.520 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 5.1177ms
+2026-11-22 18:28:03.524 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 9.3246ms
+2026-11-22 18:28:03.570 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-22 18:28:03.623 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 52.3331ms
+2026-11-22 18:28:26.982 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - null null
+2026-11-22 18:28:27.005 +05:45 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2026-11-22 18:28:27.006 +05:45 [INF] AuthenticationScheme: Bearer was challenged.
+2026-11-22 18:28:27.007 +05:45 [INF] HTTP GET /api/Task/View-my-tasks responded 401 in 20.7330 ms
+2026-11-22 18:28:27.008 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - 401 0 null 25.5046ms
+2026-11-22 18:28:41.850 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 57
+2026-11-22 18:28:41.855 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-22 18:28:41.870 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-22 18:28:41.916 +05:45 [INF] LoginUser method called with email: arun@gmail.com
+2026-11-22 18:28:42.047 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-22 18:28:42.051 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 179.9704ms
+2026-11-22 18:28:42.052 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-22 18:28:42.052 +05:45 [INF] HTTP POST /api/User/login responded 200 in 199.1375 ms
+2026-11-22 18:28:42.052 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 200 null application/json; charset=utf-8 202.5199ms
+2026-11-22 18:28:57.254 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - null null
+2026-11-22 18:28:57.280 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.GetMyTasks (First.Api)'
+2026-11-22 18:28:57.284 +05:45 [INF] Route matched with {action = "GetMyTasks", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTasks() on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 18:28:57.320 +05:45 [INF] Executed action First.Api.Controller.TaskController.GetMyTasks (First.Api) in 35.257ms
+2026-11-22 18:28:57.320 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.GetMyTasks (First.Api)'
+2026-11-22 18:28:57.320 +05:45 [ERR] HTTP GET /api/Task/View-my-tasks responded 500 in 64.4078 ms
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at First.Infrastructure.Repository.TaskRepository.GetUsersTasks(Int32 userId) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TaskRepository.cs:line 65
+   at First.Application.Services.TaskService.GetMyTasks(Int32 userId) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/TaskService.cs:line 86
+   at First.Api.Controller.TaskController.GetMyTasks() in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/TaskController.cs:line 61
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-22 18:28:57.328 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at First.Infrastructure.Repository.TaskRepository.GetUsersTasks(Int32 userId) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TaskRepository.cs:line 65
+   at First.Application.Services.TaskService.GetMyTasks(Int32 userId) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/TaskService.cs:line 86
+   at First.Api.Controller.TaskController.GetMyTasks() in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/TaskController.cs:line 61
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-22 18:28:57.329 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - 500 null text/plain; charset=utf-8 75.2977ms
+2026-11-22 18:37:32.005 +05:45 [INF] Application is shutting down...
+2026-11-22 18:37:37.710 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-22 18:37:37.755 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-22 18:37:37.756 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-22 18:37:37.756 +05:45 [INF] Hosting environment: Development
+2026-11-22 18:37:37.756 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-22 18:37:40.032 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - null null
+2026-11-22 18:37:40.082 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.GetMyTasks (First.Api)'
+2026-11-22 18:37:40.087 +05:45 [INF] Route matched with {action = "GetMyTasks", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTasks() on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 18:37:40.208 +05:45 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[First.Application.Dtos.ViewTaskDto, First.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-22 18:37:40.226 +05:45 [INF] Executed action First.Api.Controller.TaskController.GetMyTasks (First.Api) in 138.1504ms
+2026-11-22 18:37:40.227 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.GetMyTasks (First.Api)'
+2026-11-22 18:37:40.227 +05:45 [INF] HTTP GET /api/Task/View-my-tasks responded 200 in 179.3607 ms
+2026-11-22 18:37:40.228 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - 200 null application/json; charset=utf-8 196.514ms
+2026-11-22 18:38:31.225 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 59
+2026-11-22 18:38:31.228 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-22 18:38:31.236 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-22 18:38:31.255 +05:45 [INF] LoginUser method called with email: madhu@gmail.com
+2026-11-22 18:38:31.275 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-22 18:38:31.280 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 43.4372ms
+2026-11-22 18:38:31.280 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-22 18:38:31.280 +05:45 [INF] HTTP POST /api/User/login responded 200 in 52.9383 ms
+2026-11-22 18:38:31.280 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 200 null application/json; charset=utf-8 55.6602ms
+2026-11-22 18:38:47.348 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - null null
+2026-11-22 18:38:47.356 +05:45 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2026-11-22 18:38:47.357 +05:45 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-11-22 18:38:47.357 +05:45 [INF] HTTP GET /api/Task/View-my-tasks responded 403 in 6.4498 ms
+2026-11-22 18:38:47.358 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - 403 0 null 9.7502ms
+2026-11-22 18:39:44.886 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - null null
+2026-11-22 18:39:44.887 +05:45 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2026-11-22 18:39:44.888 +05:45 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-11-22 18:39:44.888 +05:45 [INF] HTTP GET /api/Task/View-my-tasks responded 403 in 1.2032 ms
+2026-11-22 18:39:44.888 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - 403 0 null 2.5777ms
+2026-11-22 18:39:45.312 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - null null
+2026-11-22 18:39:45.313 +05:45 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2026-11-22 18:39:45.313 +05:45 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-11-22 18:39:45.313 +05:45 [INF] HTTP GET /api/Task/View-my-tasks responded 403 in 0.6420 ms
+2026-11-22 18:39:45.313 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - 403 0 null 1.2794ms
+2026-11-22 18:39:45.464 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - null null
+2026-11-22 18:39:45.465 +05:45 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2026-11-22 18:39:45.465 +05:45 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-11-22 18:39:45.465 +05:45 [INF] HTTP GET /api/Task/View-my-tasks responded 403 in 0.7292 ms
+2026-11-22 18:39:45.465 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - 403 0 null 1.4916ms
+2026-11-22 18:39:49.677 +05:45 [INF] Application is shutting down...
+2026-11-22 18:39:56.008 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-22 18:39:56.051 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-22 18:39:56.052 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-22 18:39:56.052 +05:45 [INF] Hosting environment: Development
+2026-11-22 18:39:56.052 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-22 18:40:01.815 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - null null
+2026-11-22 18:40:01.860 +05:45 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2026-11-22 18:40:01.861 +05:45 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-11-22 18:40:01.861 +05:45 [INF] HTTP GET /api/Task/View-my-tasks responded 403 in 28.5253 ms
+2026-11-22 18:40:01.862 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - 403 0 null 48.5143ms
+2026-11-22 18:40:11.224 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-22 18:40:11.263 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 39.3612ms
+2026-11-22 18:40:11.591 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-22 18:40:11.592 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-22 18:40:11.592 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-22 18:40:11.592 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 0.6437ms
+2026-11-22 18:40:11.592 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-22 18:40:11.594 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 3.8206ms
+2026-11-22 18:40:11.594 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 1.9968ms
+2026-11-22 18:40:11.595 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 3.0525ms
+2026-11-22 18:40:11.595 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-22 18:40:11.601 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 5.6702ms
+2026-11-22 18:40:11.661 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-22 18:40:11.710 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.6151ms
+2026-11-22 18:40:18.170 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 59
+2026-11-22 18:40:18.177 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-22 18:40:18.193 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-22 18:40:18.237 +05:45 [INF] LoginUser method called with email: madhu@gmail.com
+2026-11-22 18:40:18.328 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-22 18:40:18.331 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 137.5351ms
+2026-11-22 18:40:18.332 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-22 18:40:18.332 +05:45 [INF] HTTP POST /api/User/login responded 200 in 159.8858 ms
+2026-11-22 18:40:18.332 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 200 null application/json; charset=utf-8 162.3034ms
+2026-11-22 18:41:21.831 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - null null
+2026-11-22 18:41:21.837 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.GetMyTasks (First.Api)'
+2026-11-22 18:41:21.842 +05:45 [INF] Route matched with {action = "GetMyTasks", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTasks() on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 18:41:21.856 +05:45 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[First.Application.Dtos.ViewTaskDto, First.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-22 18:41:21.860 +05:45 [INF] Executed action First.Api.Controller.TaskController.GetMyTasks (First.Api) in 17.6606ms
+2026-11-22 18:41:21.860 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.GetMyTasks (First.Api)'
+2026-11-22 18:41:21.860 +05:45 [INF] HTTP GET /api/Task/View-my-tasks responded 200 in 25.5859 ms
+2026-11-22 18:41:21.860 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - 200 null application/json; charset=utf-8 29.1636ms
+2026-11-22 18:41:38.392 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 59
+2026-11-22 18:41:38.395 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-22 18:41:38.395 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-22 18:41:38.396 +05:45 [INF] LoginUser method called with email: karan@gmail.com
+2026-11-22 18:41:38.402 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-22 18:41:38.403 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 7.613ms
+2026-11-22 18:41:38.403 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-22 18:41:38.403 +05:45 [INF] HTTP POST /api/User/login responded 200 in 8.6000 ms
+2026-11-22 18:41:38.403 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 200 null application/json; charset=utf-8 10.895ms
+2026-11-22 18:41:52.120 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - null null
+2026-11-22 18:41:52.121 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.GetMyTasks (First.Api)'
+2026-11-22 18:41:52.121 +05:45 [INF] Route matched with {action = "GetMyTasks", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTasks() on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 18:41:52.125 +05:45 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[First.Application.Dtos.ViewTaskDto, First.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-22 18:41:52.126 +05:45 [INF] Executed action First.Api.Controller.TaskController.GetMyTasks (First.Api) in 4.0079ms
+2026-11-22 18:41:52.126 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.GetMyTasks (First.Api)'
+2026-11-22 18:41:52.126 +05:45 [INF] HTTP GET /api/Task/View-my-tasks responded 200 in 5.4837 ms
+2026-11-22 18:41:52.126 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - 200 null application/json; charset=utf-8 6.2743ms
+2026-11-22 18:41:52.554 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - null null
+2026-11-22 18:41:52.555 +05:45 [INF] Executing endpoint 'First.Api.Controller.TaskController.GetMyTasks (First.Api)'
+2026-11-22 18:41:52.555 +05:45 [INF] Route matched with {action = "GetMyTasks", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTasks() on controller First.Api.Controller.TaskController (First.Api).
+2026-11-22 18:41:52.561 +05:45 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[First.Application.Dtos.ViewTaskDto, First.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-22 18:41:52.561 +05:45 [INF] Executed action First.Api.Controller.TaskController.GetMyTasks (First.Api) in 6.2751ms
+2026-11-22 18:41:52.561 +05:45 [INF] Executed endpoint 'First.Api.Controller.TaskController.GetMyTasks (First.Api)'
+2026-11-22 18:41:52.562 +05:45 [INF] HTTP GET /api/Task/View-my-tasks responded 200 in 7.0921 ms
+2026-11-22 18:41:52.562 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Task/View-my-tasks - 200 null application/json; charset=utf-8 7.7079ms
+2026-11-22 18:41:58.675 +05:45 [INF] Application is shutting down...
