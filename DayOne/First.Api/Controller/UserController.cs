@@ -82,6 +82,15 @@ public class UserController : ControllerBase
     }
 
 
+    [AllowAnonymous]
+    [HttpPost("refresh-token")]
+    public async Task<IActionResult> RefreshToken(string refreshToken)
+    {
+        var token=await _userService.RefreshToken(refreshToken);
+
+        return Ok(token);
+    }
+
 
     
 

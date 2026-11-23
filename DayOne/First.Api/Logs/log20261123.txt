@@ -1,0 +1,371 @@
+2026-11-23 09:47:05.046 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-23 09:47:05.095 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-23 09:47:05.095 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-23 09:47:05.096 +05:45 [INF] Hosting environment: Development
+2026-11-23 09:47:05.096 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-23 09:47:16.317 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-23 09:47:16.360 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 304 null null 44.179ms
+2026-11-23 09:47:16.361 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-23 09:47:16.361 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-23 09:47:16.362 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-23 09:47:16.362 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-23 09:47:16.362 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-23 09:47:16.362 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 0.7431ms
+2026-11-23 09:47:16.365 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 4.2093ms
+2026-11-23 09:47:16.366 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 4.113ms
+2026-11-23 09:47:16.366 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 4.2539ms
+2026-11-23 09:47:16.369 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 7.484ms
+2026-11-23 09:47:16.433 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-23 09:47:16.474 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.7278ms
+2026-11-23 09:47:34.853 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 59
+2026-11-23 09:47:34.878 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-23 09:47:34.890 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-23 09:47:34.930 +05:45 [INF] LoginUser method called with email: madhu@gmail.com
+2026-11-23 09:47:35.078 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 186.8277ms
+2026-11-23 09:47:35.078 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-23 09:47:35.078 +05:45 [ERR] HTTP POST /api/User/login responded 500 in 222.8749 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near the keyword 'VALUES'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.TokenRepository.AddRefreshToken(RefreshToken token) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TokenRepository.cs:line 20
+   at First.Application.Services.UserService.LoginUser(LoginUserDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/UserService.cs:line 84
+   at First.Api.Controller.UserController.LoginUser(LoginUserDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:d168d0d5-b9f8-406d-bff7-e123386429d2
+Error Number:156,State:1,Class:15
+2026-11-23 09:47:35.086 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near the keyword 'VALUES'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.TokenRepository.AddRefreshToken(RefreshToken token) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TokenRepository.cs:line 20
+   at First.Application.Services.UserService.LoginUser(LoginUserDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/UserService.cs:line 84
+   at First.Api.Controller.UserController.LoginUser(LoginUserDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:d168d0d5-b9f8-406d-bff7-e123386429d2
+Error Number:156,State:1,Class:15
+2026-11-23 09:47:35.088 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 500 null text/plain; charset=utf-8 235.362ms
+2026-11-23 09:52:59.956 +05:45 [INF] Application is shutting down...
+2026-11-23 09:53:03.041 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-23 09:53:03.085 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-23 09:53:03.086 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-23 09:53:03.086 +05:45 [INF] Hosting environment: Development
+2026-11-23 09:53:03.086 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-23 09:53:06.820 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 59
+2026-11-23 09:53:06.844 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-23 09:53:06.852 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-23 09:53:06.894 +05:45 [INF] LoginUser method called with email: madhu@gmail.com
+2026-11-23 09:53:07.054 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-23 09:53:07.063 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 209.2578ms
+2026-11-23 09:53:07.063 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-23 09:53:07.064 +05:45 [INF] HTTP POST /api/User/login responded 200 in 227.2355 ms
+2026-11-23 09:53:07.065 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 200 null application/json; charset=utf-8 245.7204ms
+2026-11-23 09:53:33.820 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/refresh-token?refreshToken=0VgIUSjkVwQEb3UNYY%2B0ZYnicU27qLyy%2FLkFa4eHrvbl7M0Ad%2FOX%2BSLRgM17%2BSt%2FVzecSHekKKuT9r%2BCoOWxIA%3D%3D - null 0
+2026-11-23 09:53:33.825 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.RefreshToken (First.Api)'
+2026-11-23 09:53:33.831 +05:45 [INF] Route matched with {action = "RefreshToken", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(System.String) on controller First.Api.Controller.UserController (First.Api).
+2026-11-23 09:53:33.865 +05:45 [INF] Executed action First.Api.Controller.UserController.RefreshToken (First.Api) in 33.5133ms
+2026-11-23 09:53:33.865 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.RefreshToken (First.Api)'
+2026-11-23 09:53:33.865 +05:45 [ERR] HTTP POST /api/User/refresh-token responded 500 in 41.5776 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near the keyword 'TABLE'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.TokenRepository.RevokeToken(String token, String replacementToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TokenRepository.cs:line 41
+   at First.Application.Services.UserService.RefreshToken(String oldRefreshToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/UserService.cs:line 228
+   at First.Api.Controller.UserController.RefreshToken(String refreshToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/UserController.cs:line 89
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:bdb228ad-0096-4285-aa1a-f93b544f6852
+Error Number:156,State:1,Class:15
+2026-11-23 09:53:33.878 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near the keyword 'TABLE'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.TokenRepository.RevokeToken(String token, String replacementToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TokenRepository.cs:line 41
+   at First.Application.Services.UserService.RefreshToken(String oldRefreshToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/UserService.cs:line 228
+   at First.Api.Controller.UserController.RefreshToken(String refreshToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/UserController.cs:line 89
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:bdb228ad-0096-4285-aa1a-f93b544f6852
+Error Number:156,State:1,Class:15
+2026-11-23 09:53:33.882 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/refresh-token?refreshToken=0VgIUSjkVwQEb3UNYY%2B0ZYnicU27qLyy%2FLkFa4eHrvbl7M0Ad%2FOX%2BSLRgM17%2BSt%2FVzecSHekKKuT9r%2BCoOWxIA%3D%3D - 500 null text/plain; charset=utf-8 62.7078ms
+2026-11-23 09:53:58.321 +05:45 [INF] Application is shutting down...
+2026-11-23 09:54:01.178 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-23 09:54:01.220 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-23 09:54:01.221 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-23 09:54:01.221 +05:45 [INF] Hosting environment: Development
+2026-11-23 09:54:01.221 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-23 09:54:03.256 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/refresh-token?refreshToken=0VgIUSjkVwQEb3UNYY%2B0ZYnicU27qLyy%2FLkFa4eHrvbl7M0Ad%2FOX%2BSLRgM17%2BSt%2FVzecSHekKKuT9r%2BCoOWxIA%3D%3D - null 0
+2026-11-23 09:54:03.277 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.RefreshToken (First.Api)'
+2026-11-23 09:54:03.284 +05:45 [INF] Route matched with {action = "RefreshToken", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(System.String) on controller First.Api.Controller.UserController (First.Api).
+2026-11-23 09:54:03.433 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-23 09:54:03.453 +05:45 [INF] Executed action First.Api.Controller.UserController.RefreshToken (First.Api) in 168.4926ms
+2026-11-23 09:54:03.453 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.RefreshToken (First.Api)'
+2026-11-23 09:54:03.454 +05:45 [INF] HTTP POST /api/User/refresh-token responded 200 in 184.6368 ms
+2026-11-23 09:54:03.455 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/refresh-token?refreshToken=0VgIUSjkVwQEb3UNYY%2B0ZYnicU27qLyy%2FLkFa4eHrvbl7M0Ad%2FOX%2BSLRgM17%2BSt%2FVzecSHekKKuT9r%2BCoOWxIA%3D%3D - 200 null application/json; charset=utf-8 200.0422ms
+2026-11-23 10:07:14.310 +05:45 [INF] Application is shutting down...
+2026-11-23 10:07:23.497 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-23 10:07:23.537 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-23 10:07:23.537 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-23 10:07:23.538 +05:45 [INF] Hosting environment: Development
+2026-11-23 10:07:23.538 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-23 10:07:31.113 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-23 10:07:31.154 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 40.5637ms
+2026-11-23 10:07:31.538 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-23 10:07:31.540 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-23 10:07:31.540 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-23 10:07:31.540 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-23 10:07:31.540 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-23 10:07:31.541 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 1.395ms
+2026-11-23 10:07:31.545 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 5.207ms
+2026-11-23 10:07:31.545 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 7.4937ms
+2026-11-23 10:07:31.546 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 5.3938ms
+2026-11-23 10:07:31.549 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 8.8392ms
+2026-11-23 10:07:31.638 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-23 10:07:31.709 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 70.8745ms
+2026-11-23 10:07:48.937 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 59
+2026-11-23 10:07:48.960 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-23 10:07:48.969 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-23 10:07:49.008 +05:45 [INF] LoginUser method called with email: karan@gmail.com
+2026-11-23 10:07:49.123 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-23 10:07:49.127 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 157.1457ms
+2026-11-23 10:07:49.127 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-23 10:07:49.128 +05:45 [INF] HTTP POST /api/User/login responded 200 in 185.3578 ms
+2026-11-23 10:07:49.128 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 200 null application/json; charset=utf-8 190.9653ms
+2026-11-23 10:09:05.430 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/refresh-token?refreshToken=lKICF1JieRgtDAsvGcntzjbc5laUgNgKDfxa19fDblYD%2FDZhOEy1FxMP9ZTx0VIt%2FviQaR9j072rHY751Ahs9w%3D%3D - null 0
+2026-11-23 10:09:05.433 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.RefreshToken (First.Api)'
+2026-11-23 10:09:05.438 +05:45 [INF] Route matched with {action = "RefreshToken", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(System.String) on controller First.Api.Controller.UserController (First.Api).
+2026-11-23 10:09:05.473 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-23 10:09:05.474 +05:45 [INF] Executed action First.Api.Controller.UserController.RefreshToken (First.Api) in 35.4496ms
+2026-11-23 10:09:05.474 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.RefreshToken (First.Api)'
+2026-11-23 10:09:05.474 +05:45 [INF] HTTP POST /api/User/refresh-token responded 200 in 42.4209 ms
+2026-11-23 10:09:05.474 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/refresh-token?refreshToken=lKICF1JieRgtDAsvGcntzjbc5laUgNgKDfxa19fDblYD%2FDZhOEy1FxMP9ZTx0VIt%2FviQaR9j072rHY751Ahs9w%3D%3D - 200 null application/json; charset=utf-8 44.5557ms
+2026-11-23 10:10:45.766 +05:45 [INF] Application is shutting down...
+2026-11-23 10:10:58.155 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-23 10:10:58.197 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-23 10:10:58.197 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-23 10:10:58.197 +05:45 [INF] Hosting environment: Development
+2026-11-23 10:10:58.197 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-23 10:11:02.341 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-23 10:11:02.389 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 49.01ms
+2026-11-23 10:11:02.394 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-23 10:11:02.395 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-23 10:11:02.395 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-23 10:11:02.395 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-23 10:11:02.396 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-23 10:11:02.396 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 1.3352ms
+2026-11-23 10:11:02.398 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 4.484ms
+2026-11-23 10:11:02.398 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 3.461ms
+2026-11-23 10:11:02.399 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 3.9248ms
+2026-11-23 10:11:02.402 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 5.7129ms
+2026-11-23 10:11:02.424 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-23 10:11:02.462 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.4086ms
+2026-11-23 10:11:17.582 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 57
+2026-11-23 10:11:17.606 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-23 10:11:17.618 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-23 10:11:17.659 +05:45 [INF] LoginUser method called with email: arun@gmail.com
+2026-11-23 10:11:17.761 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-23 10:11:17.765 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 145.6159ms
+2026-11-23 10:11:17.765 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-23 10:11:17.766 +05:45 [INF] HTTP POST /api/User/login responded 200 in 177.7882 ms
+2026-11-23 10:11:17.766 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 200 null application/json; charset=utf-8 184.2214ms
+2026-11-23 10:12:01.026 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/refresh-token?refreshToken=lYXN1eFDcvs9BPxAAp3v30z6qgrG%2FzzS2uBtPhB0nK4CcIS2HMCp7pi3WLSWS1ubbGVXdSRHDtiSPR2LBCv8iA%3D%3D - null 0
+2026-11-23 10:12:01.035 +05:45 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-11-23 10:12:01.040 +05:45 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-11-23 10:12:01.041 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.RefreshToken (First.Api)'
+2026-11-23 10:12:01.046 +05:45 [INF] Route matched with {action = "RefreshToken", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(System.String) on controller First.Api.Controller.UserController (First.Api).
+2026-11-23 10:12:01.068 +05:45 [INF] Executed action First.Api.Controller.UserController.RefreshToken (First.Api) in 21.736ms
+2026-11-23 10:12:01.068 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.RefreshToken (First.Api)'
+2026-11-23 10:12:01.068 +05:45 [ERR] HTTP POST /api/User/refresh-token responded 500 in 40.2821 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near the keyword 'WHERE'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.TokenRepository.RevokeToken(String token, String replacementToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TokenRepository.cs:line 42
+   at First.Application.Services.UserService.RefreshToken(String oldRefreshToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/UserService.cs:line 228
+   at First.Api.Controller.UserController.RefreshToken(String refreshToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/UserController.cs:line 89
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:50251703-24a1-47d7-9dbf-c7605931597f
+Error Number:156,State:1,Class:15
+2026-11-23 10:12:01.075 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near the keyword 'WHERE'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.TokenRepository.RevokeToken(String token, String replacementToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TokenRepository.cs:line 42
+   at First.Application.Services.UserService.RefreshToken(String oldRefreshToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/UserService.cs:line 228
+   at First.Api.Controller.UserController.RefreshToken(String refreshToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/UserController.cs:line 89
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:50251703-24a1-47d7-9dbf-c7605931597f
+Error Number:156,State:1,Class:15
+2026-11-23 10:12:01.077 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/refresh-token?refreshToken=lYXN1eFDcvs9BPxAAp3v30z6qgrG%2FzzS2uBtPhB0nK4CcIS2HMCp7pi3WLSWS1ubbGVXdSRHDtiSPR2LBCv8iA%3D%3D - 500 null text/plain; charset=utf-8 51.9018ms
+2026-11-23 10:12:23.735 +05:45 [INF] Application is shutting down...
+2026-11-23 10:12:29.453 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-23 10:12:29.495 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-23 10:12:29.495 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-23 10:12:29.496 +05:45 [INF] Hosting environment: Development
+2026-11-23 10:12:29.496 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-23 10:12:32.098 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/refresh-token?refreshToken=lYXN1eFDcvs9BPxAAp3v30z6qgrG%2FzzS2uBtPhB0nK4CcIS2HMCp7pi3WLSWS1ubbGVXdSRHDtiSPR2LBCv8iA%3D%3D - null 0
+2026-11-23 10:12:32.123 +05:45 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-11-23 10:12:32.127 +05:45 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-11-23 10:12:32.129 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.RefreshToken (First.Api)'
+2026-11-23 10:12:32.136 +05:45 [INF] Route matched with {action = "RefreshToken", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(System.String) on controller First.Api.Controller.UserController (First.Api).
+2026-11-23 10:12:32.281 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-23 10:12:32.300 +05:45 [INF] Executed action First.Api.Controller.UserController.RefreshToken (First.Api) in 163.9578ms
+2026-11-23 10:12:32.301 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.RefreshToken (First.Api)'
+2026-11-23 10:12:32.301 +05:45 [INF] HTTP POST /api/User/refresh-token responded 200 in 188.1174 ms
+2026-11-23 10:12:32.302 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/refresh-token?refreshToken=lYXN1eFDcvs9BPxAAp3v30z6qgrG%2FzzS2uBtPhB0nK4CcIS2HMCp7pi3WLSWS1ubbGVXdSRHDtiSPR2LBCv8iA%3D%3D - 200 null application/json; charset=utf-8 205.4622ms
+2026-11-23 10:42:09.693 +05:45 [INF] Application is shutting down...

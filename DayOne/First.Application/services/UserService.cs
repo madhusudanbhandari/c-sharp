@@ -8,6 +8,7 @@ using First.Domain.Entities.Enum;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Logging;
+using System.Security.Cryptography;
 
 namespace First.Application.Services;
 
@@ -16,11 +17,13 @@ public class UserService:IUserService
     private readonly IUserRepository _user;
     private readonly IConfiguration _configuration;
     private readonly ILogger<UserService> _logger;
-    public UserService(IUserRepository userRepository,IConfiguration configuration,ILogger<UserService> logger)
+    private readonly ITokenRepository _tokenRepository;
+    public UserService(IUserRepository userRepository,IConfiguration configuration,ILogger<UserService> logger,ITokenRepository tokenRepository)
     {
         _user=userRepository;
         _configuration=configuration;
         _logger=logger;
+        _tokenRepository=tokenRepository;
     }
 
     public async Task<ViewUserDto> RegisterUser(AddUserDto dto)
@@ -64,6 +67,22 @@ public class UserService:IUserService
 
         var role=await _user.GetUserRole(user.Id);
 
+        var accessToken=GenerateToken(user,role);
+
+        var refreshToken=GenerateRefreshToken();
+
+        var tokenHash=HashToken(refreshToken);
+
+        var refreshTokenEntity=new RefreshToken
+        {
+            UserId=user.Id,
+            TokenHash=tokenHash,
+            CreatedAt=DateTime.UtcNow,
+            ExpiresAt=DateTime.UtcNow.AddDays(7)
+        };
+
+        await _tokenRepository.AddRefreshToken(refreshTokenEntity);
+
 
 
         return new ViewUserDto
@@ -73,8 +92,8 @@ public class UserService:IUserService
             Email=user.Email,
             Age=user.Age,
             Role=role,
-            Token=GenerateToken(user,role),
-
+            AccessToken=accessToken,
+            RefreshToken=refreshToken
         };
     }
 
@@ -163,6 +182,63 @@ public class UserService:IUserService
         };
 
     }
+
+    public async Task<ViewUserDto?> RefreshToken(string oldRefreshToken)
+    {
+        var token=HashToken(oldRefreshToken);
+
+        var storedToken=await _tokenRepository.GetRefreshTokenAsync(token);
+
+        if (storedToken == null)
+        {
+            throw new UnauthorizedAccessException("Invalid referesh token");
+        }
+
+        if (storedToken.RevokedAt != null)
+        {
+            throw new UnauthorizedAccessException("Token already revoked");
+        }
+        
+        if (storedToken.ExpiresAt <= DateTime.UtcNow)
+        {
+            throw new UnauthorizedAccessException("Token already expired");
+        }
+
+        var user=await _user.GetUserById(storedToken.UserId);
+
+        if (user == null)
+        {
+            throw new Exception("Cannot find the user");
+        }
+
+        var newAccessToken=GenerateToken(user,user.Role);
+
+        var refreshToken=GenerateRefreshToken();
+
+        var newHash=HashToken(refreshToken);
+
+        var newtoken=new RefreshToken
+        {
+            UserId=user.Id,
+            TokenHash=newHash,
+            CreatedAt=DateTime.UtcNow,
+            ExpiresAt=DateTime.UtcNow.AddDays(7)
+        };
+
+        await _tokenRepository.RevokeToken(token,newHash);
+
+        await _tokenRepository.AddRefreshToken(newtoken);
+
+        
+        return new ViewUserDto
+        {
+            AccessToken=newAccessToken,
+            RefreshToken=refreshToken
+        };
+
+
+    }
+
     private string GenerateToken(User user,UserRole Role)
     {
         var claims=new Claim[]
@@ -190,5 +266,22 @@ public class UserService:IUserService
 
 
     }
+
+   
+    public static string GenerateRefreshToken()
+    {
+        var randomByte=new byte[64];
+        RandomNumberGenerator.Fill(randomByte);
+        return Convert.ToBase64String(randomByte);
+    }
+    
+
+    public static string HashToken(string token)
+    {
+        var bytes=Encoding.UTF8.GetBytes(token);
+        var hash=SHA256.HashData(bytes);
+        return Convert.ToHexString(hash);
+    }
+
 
 }

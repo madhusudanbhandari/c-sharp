@@ -12,4 +12,7 @@ public interface IUserService
     public Task<ViewUserDto?> AddRole(int UserId,UserRole RoleId);
 
     public Task<ViewUserDto> UpdateRole(int id,UpdateRole dto);
+
+    public Task<ViewUserDto?> RefreshToken(string oldRefreshToken);
+
 }
