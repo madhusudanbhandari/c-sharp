@@ -22,7 +22,7 @@ public class UserRepository : IUserRepository
     public async Task AddUser(User user)
     {
 
-        const string sql="INSERT INTO Users (Name, Email,Password,Age,Role) VALUES (@Name, @Email,@Password,@Age,@Role)";
+        const string sql="INSERT INTO dbo.Users(Name, Email,Password,Age,Role) VALUES (@Name, @Email,@Password,@Age,@Role)";
         await _connection.ExecuteAsync(sql, user);
     }
 

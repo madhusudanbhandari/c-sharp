@@ -2,6 +2,7 @@ using Dapper;
 using First.Application.Interface;
 using First.Domain.Entities;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace First.Infrastructure.Repository;
 
@@ -32,13 +33,26 @@ public class TokenRepository : ITokenRepository
 
     public async Task RevokeToken(string token,string? replacementToken)
     {
-        const string sql="UPDATE RefreshToken SET NewTokenHash=@NewTokenHash, RevokedAt=@RevokedAt WHERE TokenHash=@TokenHash";
+        const string sql="UPDATE RefreshToken SET ReplacementToken=@ReplacementToken, RevokedAt=@RevokedAt WHERE TokenHash=@TokenHash";
 
         var parameter=new DynamicParameters();
         parameter.Add("@TokenHash",token);
-        parameter.Add("@NewTokenHash",replacementToken);
+        parameter.Add("@ReplacementToken",replacementToken);
         parameter.Add("@RevokedAt",DateTime.UtcNow);
 
         await _connection.ExecuteAsync(sql,parameter);
+    }
+
+    public async Task DeleteToken(CancellationToken cancellationToken)
+    {
+        const string sql="DELETE FROM RefereshToken WHERE ExpiresAt<@CurrentTime";
+
+        await _connection.OpenAsync(cancellationToken);
+
+        await _connection.ExecuteAsync(new CommandDefinition(sql,
+            new {CurrentTime=DateTime.UtcNow},
+            cancellationToken:cancellationToken 
+         
+        ));
     }
 }

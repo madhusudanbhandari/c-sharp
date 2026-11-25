@@ -8,5 +8,7 @@ public interface ITokenRepository
     public Task<RefreshToken?> GetRefreshTokenAsync(string hash);
     Task RevokeToken(string tokenHash, string? replacementToken);
 
+    public Task DeleteToken(CancellationToken cancellationToken);
+
 
 }

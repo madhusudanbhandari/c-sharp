@@ -88,9 +88,10 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<ITaskService,TaskService>();
 builder.Services.AddScoped<ITokenRepository,TokenRepository>();
+builder.Services.AddHostedService<TokenCleanupService>();
 
 
- builder.Services.AddControllers();
+builder.Services.AddControllers();
 
 
 var app=builder.Build();

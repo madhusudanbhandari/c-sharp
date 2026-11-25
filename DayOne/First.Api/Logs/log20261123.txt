@@ -369,3 +369,36 @@ The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'Encode
 2026-11-23 10:12:32.301 +05:45 [INF] HTTP POST /api/User/refresh-token responded 200 in 188.1174 ms
 2026-11-23 10:12:32.302 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/refresh-token?refreshToken=lYXN1eFDcvs9BPxAAp3v30z6qgrG%2FzzS2uBtPhB0nK4CcIS2HMCp7pi3WLSWS1ubbGVXdSRHDtiSPR2LBCv8iA%3D%3D - 200 null application/json; charset=utf-8 205.4622ms
 2026-11-23 10:42:09.693 +05:45 [INF] Application is shutting down...
+2026-11-23 10:42:46.121 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-23 10:42:46.163 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-23 10:42:46.163 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-23 10:42:46.163 +05:45 [INF] Hosting environment: Development
+2026-11-23 10:42:46.163 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-23 12:44:30.078 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-23 12:44:30.136 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 304 null null 59.3807ms
+2026-11-23 12:44:30.137 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-23 12:44:30.137 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-23 12:44:30.137 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-23 12:44:30.137 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-23 12:44:30.138 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-23 12:44:30.138 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 1.1444ms
+2026-11-23 12:44:30.141 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 3.9612ms
+2026-11-23 12:44:30.141 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 3.8821ms
+2026-11-23 12:44:30.142 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 4.1862ms
+2026-11-23 12:44:30.144 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 6.3949ms
+2026-11-23 12:44:30.215 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-23 12:44:30.262 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.4831ms
+2026-11-23 12:44:35.261 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-23 12:44:35.262 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 304 null null 0.9611ms
+2026-11-23 12:44:35.267 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-23 12:44:35.267 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-23 12:44:35.268 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 1.0695ms
+2026-11-23 12:44:35.268 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 0.2604ms
+2026-11-23 12:44:35.268 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-23 12:44:35.268 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 0.2592ms
+2026-11-23 12:44:35.269 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-23 12:44:35.269 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 0.4485ms
+2026-11-23 12:44:35.269 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-23 12:44:35.270 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 0.2222ms
+2026-11-23 12:44:35.304 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-23 12:44:35.310 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.8396ms
