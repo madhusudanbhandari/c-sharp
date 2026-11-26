@@ -45,7 +45,7 @@ public class TokenRepository : ITokenRepository
 
     public async Task DeleteToken(CancellationToken cancellationToken)
     {
-        const string sql="DELETE FROM RefereshToken WHERE ExpiresAt<@CurrentTime";
+        const string sql="DELETE FROM RefreshToken WHERE ExpiresAt<@CurrentTime";
 
         await _connection.OpenAsync(cancellationToken);
 

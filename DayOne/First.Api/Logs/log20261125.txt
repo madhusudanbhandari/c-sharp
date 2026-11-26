@@ -697,3 +697,223 @@ ClientConnectionId:0d5b9497-b40e-4fa2-a57f-a7293f2730b5
 Error Number:208,State:1,Class:16
 2026-11-25 10:57:21.774 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/register - 500 null text/plain; charset=utf-8 171.5791ms
 2026-11-25 10:58:04.480 +05:45 [INF] Application is shutting down...
+2026-11-25 13:45:55.556 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-25 13:45:55.603 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-25 13:45:55.604 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-25 13:45:55.605 +05:45 [INF] Hosting environment: Development
+2026-11-25 13:45:55.605 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-25 13:45:55.741 +05:45 [ERR] Error while cleaning the token
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'RefereshToken'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.TokenRepository.DeleteToken(CancellationToken cancellationToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TokenRepository.cs:line 52
+   at First.Application.Services.TokenCleanupService.ExecuteAsync(CancellationToken stoppingToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/TokenCleanupService.cs:line 30
+ClientConnectionId:0ed84e75-0fbd-4af8-a752-2108e5148604
+Error Number:208,State:1,Class:16
+2026-11-25 13:49:09.707 +05:45 [INF] Application is shutting down...
+2026-11-25 13:49:13.863 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-25 13:49:13.911 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-25 13:49:13.912 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-25 13:49:13.912 +05:45 [INF] Hosting environment: Development
+2026-11-25 13:49:13.912 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-25 13:49:14.004 +05:45 [ERR] Error while cleaning the token
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'RefreshToken'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.TokenRepository.DeleteToken(CancellationToken cancellationToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TokenRepository.cs:line 52
+   at First.Application.Services.TokenCleanupService.ExecuteAsync(CancellationToken stoppingToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/TokenCleanupService.cs:line 30
+ClientConnectionId:c69aef22-139e-41f4-a6f7-cd72d4734478
+Error Number:208,State:1,Class:16
+2026-11-25 13:58:46.880 +05:45 [INF] Application is shutting down...
+2026-11-25 13:59:08.937 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-25 13:59:08.983 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-25 13:59:08.984 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-25 13:59:08.984 +05:45 [INF] Hosting environment: Development
+2026-11-25 13:59:08.984 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-25 13:59:09.084 +05:45 [INF] Token deleted successfully
+2026-11-25 13:59:19.995 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-25 13:59:20.033 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 39.0627ms
+2026-11-25 13:59:20.407 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-25 13:59:20.407 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-25 13:59:20.407 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-25 13:59:20.407 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-25 13:59:20.409 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 2.63ms
+2026-11-25 13:59:20.411 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-25 13:59:20.415 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 9.8057ms
+2026-11-25 13:59:20.416 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 8.9908ms
+2026-11-25 13:59:20.416 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 9.0063ms
+2026-11-25 13:59:20.422 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 10.2184ms
+2026-11-25 13:59:20.513 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-25 13:59:20.552 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.0359ms
+2026-11-25 13:59:46.539 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/register - application/json 91
+2026-11-25 13:59:46.562 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.RegisterUser (First.Api)'
+2026-11-25 13:59:46.574 +05:45 [INF] Route matched with {action = "RegisterUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(First.Application.Dtos.AddUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-25 13:59:46.620 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-25 13:59:46.626 +05:45 [INF] Executed action First.Api.Controller.UserController.RegisterUser (First.Api) in 50.5778ms
+2026-11-25 13:59:46.626 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.RegisterUser (First.Api)'
+2026-11-25 13:59:46.627 +05:45 [INF] HTTP POST /api/User/register responded 200 in 84.0140 ms
+2026-11-25 13:59:46.627 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/register - 200 null application/json; charset=utf-8 88.3772ms
+2026-11-25 14:00:05.881 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 59
+2026-11-25 14:00:05.886 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-25 14:00:05.891 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-25 14:00:05.895 +05:45 [INF] LoginUser method called with email: madhu@gmail.com
+2026-11-25 14:00:05.946 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 54.0556ms
+2026-11-25 14:00:05.946 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-25 14:00:05.946 +05:45 [ERR] HTTP POST /api/User/login responded 500 in 61.9934 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Roles'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__270_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 489
+   at First.Infrastructure.Repository.UserRepository.GetUserRole(Int32 userId) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/UserRepository.cs:line 106
+   at First.Application.Services.UserService.LoginUser(LoginUserDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/UserService.cs:line 68
+   at First.Api.Controller.UserController.LoginUser(LoginUserDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:6c481f43-5314-4b3c-a565-907f227d292b
+Error Number:208,State:1,Class:16
+2026-11-25 14:00:05.958 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Roles'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__270_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 489
+   at First.Infrastructure.Repository.UserRepository.GetUserRole(Int32 userId) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/UserRepository.cs:line 106
+   at First.Application.Services.UserService.LoginUser(LoginUserDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/UserService.cs:line 68
+   at First.Api.Controller.UserController.LoginUser(LoginUserDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:6c481f43-5314-4b3c-a565-907f227d292b
+Error Number:208,State:1,Class:16
+2026-11-25 14:00:05.960 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 500 null text/plain; charset=utf-8 79.2843ms
+2026-11-25 14:20:59.923 +05:45 [INF] Application is shutting down...
+2026-11-25 14:21:22.919 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-25 14:21:22.965 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-25 14:21:22.966 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-25 14:21:22.966 +05:45 [INF] Hosting environment: Development
+2026-11-25 14:21:22.966 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-25 14:21:23.066 +05:45 [INF] Token deleted successfully
+2026-11-25 14:21:39.183 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 59
+2026-11-25 14:21:39.212 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-25 14:21:39.220 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-25 14:21:39.246 +05:45 [INF] LoginUser method called with email: madhu@gmail.com
+2026-11-25 14:21:39.308 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-25 14:21:39.317 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 96.0186ms
+2026-11-25 14:21:39.317 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-25 14:21:39.318 +05:45 [INF] HTTP POST /api/User/login responded 200 in 115.9810 ms
+2026-11-25 14:21:39.319 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 200 null application/json; charset=utf-8 137.265ms
+2026-11-25 16:12:05.749 +05:45 [INF] Application is shutting down...
+2026-11-25 16:12:17.621 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-25 16:12:17.666 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-25 16:12:17.667 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-25 16:12:17.667 +05:45 [INF] Hosting environment: Development
+2026-11-25 16:12:17.668 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-25 16:12:17.764 +05:45 [INF] Token deleted successfully
+2026-11-25 16:12:24.576 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 59
+2026-11-25 16:12:24.603 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-25 16:12:24.611 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-25 16:12:24.634 +05:45 [INF] LoginUser method called with email: madhu@gmail.com
+2026-11-25 16:12:24.677 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-25 16:12:24.685 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 72.9457ms
+2026-11-25 16:12:24.685 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-25 16:12:24.686 +05:45 [INF] HTTP POST /api/User/login responded 200 in 93.0219 ms
+2026-11-25 16:12:24.687 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 200 null application/json; charset=utf-8 111.9717ms
+2026-11-25 16:17:17.776 +05:45 [INF] Token deleted successfully
+2026-11-25 16:22:01.162 +05:45 [INF] Application is shutting down...
+2026-11-25 16:22:12.789 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-25 16:22:12.831 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-25 16:22:12.832 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-25 16:22:12.832 +05:45 [INF] Hosting environment: Development
+2026-11-25 16:22:12.832 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-25 16:22:12.913 +05:45 [INF] Token deleted successfully
+2026-11-25 16:22:26.260 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-25 16:22:26.305 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 45.3483ms
+2026-11-25 16:22:26.699 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-25 16:22:26.700 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-25 16:22:26.700 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-25 16:22:26.701 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 0.9997ms
+2026-11-25 16:22:26.701 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-25 16:22:26.701 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-25 16:22:26.706 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 7.9403ms
+2026-11-25 16:22:26.706 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 5.3598ms
+2026-11-25 16:22:26.706 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 6.6387ms
+2026-11-25 16:22:26.711 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 9.8257ms
+2026-11-25 16:22:26.788 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-25 16:22:26.834 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.7158ms
+2026-11-25 16:22:50.749 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/register - application/json 91
+2026-11-25 16:22:50.772 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.RegisterUser (First.Api)'
+2026-11-25 16:22:50.785 +05:45 [INF] Route matched with {action = "RegisterUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(First.Application.Dtos.AddUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-25 16:22:50.815 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-25 16:22:50.820 +05:45 [INF] Executed action First.Api.Controller.UserController.RegisterUser (First.Api) in 33.6415ms
+2026-11-25 16:22:50.820 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.RegisterUser (First.Api)'
+2026-11-25 16:22:50.821 +05:45 [INF] HTTP POST /api/User/register responded 200 in 69.0825 ms
+2026-11-25 16:22:50.821 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/register - 200 null application/json; charset=utf-8 72.5719ms
+2026-11-25 16:23:09.744 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/User/login - application/json 59
+2026-11-25 16:23:09.748 +05:45 [INF] Executing endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-25 16:23:09.754 +05:45 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(First.Application.Dtos.LoginUserDto) on controller First.Api.Controller.UserController (First.Api).
+2026-11-25 16:23:09.757 +05:45 [INF] LoginUser method called with email: karan@gmail.com
+2026-11-25 16:23:09.809 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewUserDto'.
+2026-11-25 16:23:09.809 +05:45 [INF] Executed action First.Api.Controller.UserController.LoginUser (First.Api) in 55.0284ms
+2026-11-25 16:23:09.809 +05:45 [INF] Executed endpoint 'First.Api.Controller.UserController.LoginUser (First.Api)'
+2026-11-25 16:23:09.809 +05:45 [INF] HTTP POST /api/User/login responded 200 in 63.1561 ms
+2026-11-25 16:23:09.809 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/User/login - 200 null application/json; charset=utf-8 65.9145ms
+2026-11-25 16:27:12.932 +05:45 [INF] Token deleted successfully
+2026-11-25 16:32:12.970 +05:45 [INF] Token deleted successfully
+2026-11-25 16:37:12.979 +05:45 [INF] Token deleted successfully
+2026-11-25 16:42:12.988 +05:45 [INF] Token deleted successfully
+2026-11-25 16:42:18.289 +05:45 [INF] Application is shutting down...

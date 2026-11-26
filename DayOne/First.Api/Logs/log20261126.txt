@@ -1,0 +1,902 @@
+2026-11-26 09:16:08.592 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-26 09:16:08.640 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-26 09:16:08.641 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-26 09:16:08.641 +05:45 [INF] Hosting environment: Development
+2026-11-26 09:16:08.641 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-26 09:16:14.123 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-26 09:16:14.164 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 304 null null 41.557ms
+2026-11-26 09:16:14.165 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-26 09:16:14.165 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-26 09:16:14.166 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 0.9154ms
+2026-11-26 09:16:14.167 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-26 09:16:14.167 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-26 09:16:14.168 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-26 09:16:14.170 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 5.0323ms
+2026-11-26 09:16:14.170 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 3.6181ms
+2026-11-26 09:16:14.171 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 3.8641ms
+2026-11-26 09:16:14.174 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 6.8069ms
+2026-11-26 09:16:14.231 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/apple-touch-icon-precomposed.png - null null
+2026-11-26 09:16:14.236 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-26 09:16:14.243 +05:45 [INF] HTTP GET /apple-touch-icon-precomposed.png responded 404 in 11.4657 ms
+2026-11-26 09:16:14.244 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/apple-touch-icon-precomposed.png - 404 0 null 12.982ms
+2026-11-26 09:16:14.244 +05:45 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5187/apple-touch-icon-precomposed.png, Response status code: 404
+2026-11-26 09:16:14.245 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/apple-touch-icon.png - null null
+2026-11-26 09:16:14.245 +05:45 [INF] HTTP GET /apple-touch-icon.png responded 404 in 0.3111 ms
+2026-11-26 09:16:14.245 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/apple-touch-icon.png - 404 0 null 0.4985ms
+2026-11-26 09:16:14.245 +05:45 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5187/apple-touch-icon.png, Response status code: 404
+2026-11-26 09:16:14.245 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/favicon-32x32.png - null null
+2026-11-26 09:16:14.246 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/favicon-32x32.png - 200 628 image/png 0.4025ms
+2026-11-26 09:16:14.277 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.1436ms
+2026-11-26 09:16:23.227 +05:45 [ERR] Error while cleaning the token
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at Microsoft.Data.SqlClient.ManagedSni.SniTcpHandle.Connect(String serverName, Int32 port, TimeoutTimer timeout, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo)
+   at Microsoft.Data.SqlClient.ManagedSni.SniTcpHandle..ctor(String serverName, Int32 port, TimeoutTimer timeout, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.Connect(ServerInfo serverInfo, SqlConnectionInternal connHandler, TimeoutTimer timeout, SqlConnectionOptions connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionOptions connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionOptions connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal..ctor(DbConnectionPoolIdentity identity, SqlConnectionOptions connectionOptions, TimeoutTimer timeout, SqlCredential credential, DbConnectionPoolGroupProviderInfo providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback, SspiContextProvider sspiContextProvider, ISqlClientMetrics metrics, RegisteredApplication registeredApplication)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(SqlConnectionOptions options, ConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreatePooledConnection(DbConnection owningConnection, IDbConnectionPool pool, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionInternal oldConnection, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, TimeoutTimer timeout, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, TimeoutTimer timeout, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at First.Infrastructure.Repository.TokenRepository.DeleteToken(CancellationToken cancellationToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TokenRepository.cs:line 50
+   at First.Application.Services.TokenCleanupService.ExecuteAsync(CancellationToken stoppingToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/TokenCleanupService.cs:line 30
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2026-11-26 09:16:40.605 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-26 09:16:40.610 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 5.0022ms
+2026-11-26 09:16:40.613 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-26 09:16:40.613 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-26 09:16:40.614 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-26 09:16:40.614 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 0.3637ms
+2026-11-26 09:16:40.614 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 0.3612ms
+2026-11-26 09:16:40.614 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 0.2629ms
+2026-11-26 09:16:40.614 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-26 09:16:40.614 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 0.2487ms
+2026-11-26 09:16:40.615 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-26 09:16:40.615 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 0.2145ms
+2026-11-26 09:16:40.638 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-26 09:16:40.643 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.1487ms
+2026-11-26 09:16:56.419 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/Project/add-project - application/json 34
+2026-11-26 09:16:56.426 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.AddProject (First.Api)'
+2026-11-26 09:16:56.440 +05:45 [INF] Route matched with {action = "AddProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddProject(First.Application.Dtos.AddProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 09:16:56.443 +05:45 [INF] Executed action First.Api.Controller.ProjectController.AddProject (First.Api) in 1.1984ms
+2026-11-26 09:16:56.443 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.AddProject (First.Api)'
+2026-11-26 09:16:56.443 +05:45 [ERR] HTTP POST /api/Project/add-project responded 500 in 20.0605 ms
+System.InvalidOperationException: Unable to resolve service for type 'First.Application.Interface.IProjectService' while attempting to activate 'First.Api.Controller.ProjectController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-26 09:16:56.446 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'First.Application.Interface.IProjectService' while attempting to activate 'First.Api.Controller.ProjectController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-26 09:16:56.447 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/Project/add-project - 500 null text/plain; charset=utf-8 27.9742ms
+2026-11-26 09:17:12.317 +05:45 [INF] Application is shutting down...
+2026-11-26 09:18:38.628 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-26 09:18:38.676 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-26 09:18:38.677 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-26 09:18:38.677 +05:45 [INF] Hosting environment: Development
+2026-11-26 09:18:38.677 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-26 09:18:45.187 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-26 09:18:45.234 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 304 null null 48.078ms
+2026-11-26 09:18:45.238 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-26 09:18:45.239 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-26 09:18:45.239 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-26 09:18:45.239 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-26 09:18:45.239 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 0.9525ms
+2026-11-26 09:18:45.241 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 2.7516ms
+2026-11-26 09:18:45.242 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 2.8938ms
+2026-11-26 09:18:45.242 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-26 09:18:45.242 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 3.1565ms
+2026-11-26 09:18:45.246 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 4.5845ms
+2026-11-26 09:18:45.307 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-26 09:18:45.345 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.5298ms
+2026-11-26 09:18:53.252 +05:45 [ERR] Error while cleaning the token
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at Microsoft.Data.SqlClient.ManagedSni.SniTcpHandle.Connect(String serverName, Int32 port, TimeoutTimer timeout, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo)
+   at Microsoft.Data.SqlClient.ManagedSni.SniTcpHandle..ctor(String serverName, Int32 port, TimeoutTimer timeout, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.Connect(ServerInfo serverInfo, SqlConnectionInternal connHandler, TimeoutTimer timeout, SqlConnectionOptions connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionOptions connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionOptions connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal..ctor(DbConnectionPoolIdentity identity, SqlConnectionOptions connectionOptions, TimeoutTimer timeout, SqlCredential credential, DbConnectionPoolGroupProviderInfo providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback, SspiContextProvider sspiContextProvider, ISqlClientMetrics metrics, RegisteredApplication registeredApplication)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(SqlConnectionOptions options, ConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreatePooledConnection(DbConnection owningConnection, IDbConnectionPool pool, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionInternal oldConnection, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, TimeoutTimer timeout, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, TimeoutTimer timeout, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at First.Infrastructure.Repository.TokenRepository.DeleteToken(CancellationToken cancellationToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/TokenRepository.cs:line 50
+   at First.Application.Services.TokenCleanupService.ExecuteAsync(CancellationToken stoppingToken) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/TokenCleanupService.cs:line 30
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2026-11-26 09:19:00.288 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/Project/add-project - application/json 33
+2026-11-26 09:19:00.313 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.AddProject (First.Api)'
+2026-11-26 09:19:00.325 +05:45 [INF] Route matched with {action = "AddProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddProject(First.Application.Dtos.AddProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 09:19:14.897 +05:45 [INF] Executed action First.Api.Controller.ProjectController.AddProject (First.Api) in 14569.5302ms
+2026-11-26 09:19:14.900 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.AddProject (First.Api)'
+2026-11-26 09:19:14.902 +05:45 [ERR] HTTP POST /api/Project/add-project responded 500 in 14608.2508 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at Microsoft.Data.SqlClient.ManagedSni.SniTcpHandle.Connect(String serverName, Int32 port, TimeoutTimer timeout, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo)
+   at Microsoft.Data.SqlClient.ManagedSni.SniTcpHandle..ctor(String serverName, Int32 port, TimeoutTimer timeout, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.Connect(ServerInfo serverInfo, SqlConnectionInternal connHandler, TimeoutTimer timeout, SqlConnectionOptions connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionOptions connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionOptions connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal..ctor(DbConnectionPoolIdentity identity, SqlConnectionOptions connectionOptions, TimeoutTimer timeout, SqlCredential credential, DbConnectionPoolGroupProviderInfo providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback, SspiContextProvider sspiContextProvider, ISqlClientMetrics metrics, RegisteredApplication registeredApplication)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(SqlConnectionOptions options, ConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreatePooledConnection(DbConnection owningConnection, IDbConnectionPool pool, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionInternal oldConnection, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, TimeoutTimer timeout, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, TimeoutTimer timeout, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at First.Infrastructure.Repository.ProjectRepository.AddProject(Projects projects) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/ProjectRepository.cs:line 25
+   at First.Application.Services.ProjectService.AddProject(AddProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 24
+   at First.Api.Controller.ProjectController.AddProject(AddProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 21
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2026-11-26 09:19:14.910 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.Net.Sockets.SocketException (61): Connection refused
+   at Microsoft.Data.SqlClient.ManagedSni.SniTcpHandle.Connect(String serverName, Int32 port, TimeoutTimer timeout, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo)
+   at Microsoft.Data.SqlClient.ManagedSni.SniTcpHandle..ctor(String serverName, Int32 port, TimeoutTimer timeout, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.Connect(ServerInfo serverInfo, SqlConnectionInternal connHandler, TimeoutTimer timeout, SqlConnectionOptions connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionOptions connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionOptions connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal..ctor(DbConnectionPoolIdentity identity, SqlConnectionOptions connectionOptions, TimeoutTimer timeout, SqlCredential credential, DbConnectionPoolGroupProviderInfo providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback, SspiContextProvider sspiContextProvider, ISqlClientMetrics metrics, RegisteredApplication registeredApplication)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(SqlConnectionOptions options, ConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreatePooledConnection(DbConnection owningConnection, IDbConnectionPool pool, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionInternal oldConnection, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, TimeoutTimer timeout, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, TimeoutTimer timeout, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at First.Infrastructure.Repository.ProjectRepository.AddProject(Projects projects) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/ProjectRepository.cs:line 25
+   at First.Application.Services.ProjectService.AddProject(AddProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 24
+   at First.Api.Controller.ProjectController.AddProject(AddProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 21
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2026-11-26 09:19:14.917 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/Project/add-project - 500 null text/plain; charset=utf-8 14629.5411ms
+2026-11-26 09:20:40.131 +05:45 [INF] Application is shutting down...
+2026-11-26 09:20:44.882 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-26 09:20:44.925 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-26 09:20:44.926 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-26 09:20:44.926 +05:45 [INF] Hosting environment: Development
+2026-11-26 09:20:44.926 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-26 09:20:45.035 +05:45 [INF] Token deleted successfully
+2026-11-26 09:20:51.905 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/Project/add-project - application/json 33
+2026-11-26 09:20:51.931 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.AddProject (First.Api)'
+2026-11-26 09:20:51.939 +05:45 [INF] Route matched with {action = "AddProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddProject(First.Application.Dtos.AddProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 09:20:51.977 +05:45 [INF] Executed action First.Api.Controller.ProjectController.AddProject (First.Api) in 36.3343ms
+2026-11-26 09:20:51.977 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.AddProject (First.Api)'
+2026-11-26 09:20:51.978 +05:45 [ERR] HTTP POST /api/Project/add-project responded 500 in 57.9465 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Projects'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.ProjectRepository.AddProject(Projects projects) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/ProjectRepository.cs:line 25
+   at First.Application.Services.ProjectService.AddProject(AddProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 24
+   at First.Api.Controller.ProjectController.AddProject(AddProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 21
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:2858548c-6c3c-4090-bfdc-17784bc400c5
+Error Number:208,State:1,Class:16
+2026-11-26 09:20:51.986 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Projects'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.ProjectRepository.AddProject(Projects projects) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/ProjectRepository.cs:line 25
+   at First.Application.Services.ProjectService.AddProject(AddProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 24
+   at First.Api.Controller.ProjectController.AddProject(AddProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 21
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:2858548c-6c3c-4090-bfdc-17784bc400c5
+Error Number:208,State:1,Class:16
+2026-11-26 09:20:51.989 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/Project/add-project - 500 null text/plain; charset=utf-8 84.8285ms
+2026-11-26 09:21:25.264 +05:45 [INF] Application is shutting down...
+2026-11-26 09:21:28.392 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-26 09:21:28.434 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-26 09:21:28.435 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-26 09:21:28.435 +05:45 [INF] Hosting environment: Development
+2026-11-26 09:21:28.435 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-26 09:21:28.518 +05:45 [INF] Token deleted successfully
+2026-11-26 09:21:30.533 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/Project/add-project - application/json 33
+2026-11-26 09:21:30.549 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.AddProject (First.Api)'
+2026-11-26 09:21:30.555 +05:45 [INF] Route matched with {action = "AddProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddProject(First.Application.Dtos.AddProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 09:21:30.603 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewProjectDto'.
+2026-11-26 09:21:30.608 +05:45 [INF] Executed action First.Api.Controller.ProjectController.AddProject (First.Api) in 52.5207ms
+2026-11-26 09:21:30.609 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.AddProject (First.Api)'
+2026-11-26 09:21:30.610 +05:45 [INF] HTTP POST /api/Project/add-project responded 200 in 66.5391 ms
+2026-11-26 09:21:30.611 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/Project/add-project - 200 null application/json; charset=utf-8 78.6128ms
+2026-11-26 09:21:41.000 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - null null
+2026-11-26 09:21:41.003 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 09:21:41.009 +05:45 [INF] Route matched with {action = "ViewProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewProject(Int32) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 09:21:41.052 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewProjectDto'.
+2026-11-26 09:21:41.053 +05:45 [INF] Executed action First.Api.Controller.ProjectController.ViewProject (First.Api) in 43.6863ms
+2026-11-26 09:21:41.053 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 09:21:41.053 +05:45 [INF] HTTP GET /api/Project/get-project responded 200 in 50.3435 ms
+2026-11-26 09:21:41.053 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - 200 null application/json; charset=utf-8 53.1275ms
+2026-11-26 09:22:13.972 +05:45 [INF] Application is shutting down...
+2026-11-26 09:22:18.092 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-26 09:22:18.133 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-26 09:22:18.134 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-26 09:22:18.134 +05:45 [INF] Hosting environment: Development
+2026-11-26 09:22:18.134 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-26 09:22:18.217 +05:45 [INF] Token deleted successfully
+2026-11-26 09:22:26.587 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - null null
+2026-11-26 09:22:26.614 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 09:22:26.621 +05:45 [INF] Route matched with {action = "ViewProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewProject(Int32) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 09:22:26.645 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewProjectDto'.
+2026-11-26 09:22:26.662 +05:45 [INF] Executed action First.Api.Controller.ProjectController.ViewProject (First.Api) in 40.088ms
+2026-11-26 09:22:26.663 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 09:22:26.663 +05:45 [INF] HTTP GET /api/Project/get-project responded 200 in 60.1479 ms
+2026-11-26 09:22:26.664 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - 200 null application/json; charset=utf-8 78.0803ms
+2026-11-26 09:22:34.641 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Project/get-projects - null null
+2026-11-26 09:22:34.644 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.GetProjects (First.Api)'
+2026-11-26 09:22:34.649 +05:45 [INF] Route matched with {action = "GetProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProjects() on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 09:22:34.658 +05:45 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[First.Application.Dtos.ViewProjectDto, First.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-26 09:22:34.663 +05:45 [INF] Executed action First.Api.Controller.ProjectController.GetProjects (First.Api) in 14.3431ms
+2026-11-26 09:22:34.664 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.GetProjects (First.Api)'
+2026-11-26 09:22:34.664 +05:45 [INF] HTTP GET /api/Project/get-projects responded 200 in 20.8977 ms
+2026-11-26 09:22:34.664 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Project/get-projects - 200 null application/json; charset=utf-8 23.4905ms
+2026-11-26 10:13:47.677 +05:45 [INF] Application is shutting down...
+2026-11-26 10:15:06.396 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-26 10:15:06.461 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-26 10:15:06.462 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-26 10:15:06.463 +05:45 [INF] Hosting environment: Development
+2026-11-26 10:15:06.463 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-26 10:15:06.560 +05:45 [INF] Token deleted successfully
+2026-11-26 10:15:10.905 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-26 10:15:10.949 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 45.4435ms
+2026-11-26 10:15:11.337 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-26 10:15:11.338 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-26 10:15:11.339 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-26 10:15:11.339 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-26 10:15:11.340 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 1.072ms
+2026-11-26 10:15:11.342 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-26 10:15:11.345 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 6.5405ms
+2026-11-26 10:15:11.345 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 8.4492ms
+2026-11-26 10:15:11.347 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 7.0929ms
+2026-11-26 10:15:11.352 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 9.703ms
+2026-11-26 10:15:11.433 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-26 10:15:11.481 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 47.7275ms
+2026-11-26 10:15:33.250 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - application/json 57
+2026-11-26 10:15:33.276 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:15:33.289 +05:45 [INF] Route matched with {action = "UpdateProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProject(Int32, First.Application.Dtos.UpdateProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:15:33.309 +05:45 [INF] Executed action First.Api.Controller.ProjectController.UpdateProject (First.Api) in 18.5663ms
+2026-11-26 10:15:33.309 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:15:33.309 +05:45 [ERR] HTTP PATCH /api/Project/update-project responded 500 in 53.9722 ms
+System.Exception: project cannot be found
+   at First.Application.Services.ProjectService.UpdateProject(Int32 projectId, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 69
+   at First.Api.Controller.ProjectController.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-26 10:15:33.315 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: project cannot be found
+   at First.Application.Services.ProjectService.UpdateProject(Int32 projectId, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 69
+   at First.Api.Controller.ProjectController.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-26 10:15:33.316 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - 500 null text/plain; charset=utf-8 66.148ms
+2026-11-26 10:19:41.784 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - application/json 57
+2026-11-26 10:19:41.792 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:19:41.793 +05:45 [INF] Route matched with {action = "UpdateProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProject(Int32, First.Application.Dtos.UpdateProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:19:41.795 +05:45 [INF] Executed action First.Api.Controller.ProjectController.UpdateProject (First.Api) in 2.0426ms
+2026-11-26 10:19:41.795 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:19:41.795 +05:45 [ERR] HTTP PATCH /api/Project/update-project responded 500 in 4.5431 ms
+System.Exception: project cannot be found
+   at First.Application.Services.ProjectService.UpdateProject(Int32 projectId, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 69
+   at First.Api.Controller.ProjectController.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-26 10:19:41.797 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: project cannot be found
+   at First.Application.Services.ProjectService.UpdateProject(Int32 projectId, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 69
+   at First.Api.Controller.ProjectController.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-26 10:19:41.798 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - 500 null text/plain; charset=utf-8 14.1982ms
+2026-11-26 10:19:42.329 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - application/json 57
+2026-11-26 10:19:42.332 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:19:42.333 +05:45 [INF] Route matched with {action = "UpdateProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProject(Int32, First.Application.Dtos.UpdateProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:19:42.335 +05:45 [INF] Executed action First.Api.Controller.ProjectController.UpdateProject (First.Api) in 2.3843ms
+2026-11-26 10:19:42.335 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:19:42.336 +05:45 [ERR] HTTP PATCH /api/Project/update-project responded 500 in 6.4234 ms
+System.Exception: project cannot be found
+   at First.Application.Services.ProjectService.UpdateProject(Int32 projectId, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 69
+   at First.Api.Controller.ProjectController.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-26 10:19:42.337 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: project cannot be found
+   at First.Application.Services.ProjectService.UpdateProject(Int32 projectId, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 69
+   at First.Api.Controller.ProjectController.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-26 10:19:42.338 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - 500 null text/plain; charset=utf-8 8.7597ms
+2026-11-26 10:19:42.692 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - application/json 57
+2026-11-26 10:19:42.692 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:19:42.692 +05:45 [INF] Route matched with {action = "UpdateProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProject(Int32, First.Application.Dtos.UpdateProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:19:42.693 +05:45 [INF] Executed action First.Api.Controller.ProjectController.UpdateProject (First.Api) in 0.336ms
+2026-11-26 10:19:42.693 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:19:42.693 +05:45 [ERR] HTTP PATCH /api/Project/update-project responded 500 in 0.8602 ms
+System.Exception: project cannot be found
+   at First.Application.Services.ProjectService.UpdateProject(Int32 projectId, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 69
+   at First.Api.Controller.ProjectController.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-26 10:19:42.693 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: project cannot be found
+   at First.Application.Services.ProjectService.UpdateProject(Int32 projectId, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 69
+   at First.Api.Controller.ProjectController.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-26 10:19:42.694 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - 500 null text/plain; charset=utf-8 2.2321ms
+2026-11-26 10:22:17.570 +05:45 [INF] Application is shutting down...
+2026-11-26 10:22:31.205 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-26 10:22:31.247 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-26 10:22:31.248 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-26 10:22:31.248 +05:45 [INF] Hosting environment: Development
+2026-11-26 10:22:31.248 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-26 10:22:31.336 +05:45 [INF] Token deleted successfully
+2026-11-26 10:22:37.509 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - application/json 57
+2026-11-26 10:22:37.536 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:22:37.544 +05:45 [INF] Route matched with {action = "UpdateProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProject(Int32, First.Application.Dtos.UpdateProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:22:37.602 +05:45 [INF] Executed action First.Api.Controller.ProjectController.UpdateProject (First.Api) in 56.5084ms
+2026-11-26 10:22:37.602 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:22:37.603 +05:45 [ERR] HTTP PATCH /api/Project/update-project responded 500 in 78.3634 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Projects'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.ProjectRepository.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/ProjectRepository.cs:line 75
+   at First.Application.Services.ProjectService.UpdateProject(Int32 projectId, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 71
+   at First.Api.Controller.ProjectController.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:e9a0f4d4-da23-4697-a198-4ba01c5c284c
+Error Number:208,State:1,Class:16
+2026-11-26 10:22:37.611 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Projects'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.ProjectRepository.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/ProjectRepository.cs:line 75
+   at First.Application.Services.ProjectService.UpdateProject(Int32 projectId, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 71
+   at First.Api.Controller.ProjectController.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:e9a0f4d4-da23-4697-a198-4ba01c5c284c
+Error Number:208,State:1,Class:16
+2026-11-26 10:22:37.614 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - 500 null text/plain; charset=utf-8 106.4152ms
+2026-11-26 10:22:54.681 +05:45 [INF] Application is shutting down...
+2026-11-26 10:22:59.674 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-26 10:22:59.727 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-26 10:22:59.728 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-26 10:22:59.728 +05:45 [INF] Hosting environment: Development
+2026-11-26 10:22:59.728 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-26 10:22:59.817 +05:45 [INF] Token deleted successfully
+2026-11-26 10:23:02.550 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - application/json 57
+2026-11-26 10:23:02.572 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:23:02.580 +05:45 [INF] Route matched with {action = "UpdateProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProject(Int32, First.Application.Dtos.UpdateProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:23:02.653 +05:45 [INF] Executed action First.Api.Controller.ProjectController.UpdateProject (First.Api) in 72.2222ms
+2026-11-26 10:23:02.654 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:23:02.655 +05:45 [ERR] HTTP PATCH /api/Project/update-project responded 500 in 89.9121 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'First.dbo.Project', column 'Name'. Truncated value: 'Business Management '.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.ProjectRepository.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/ProjectRepository.cs:line 75
+   at First.Application.Services.ProjectService.UpdateProject(Int32 projectId, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 71
+   at First.Api.Controller.ProjectController.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:81d64f00-ef16-4872-9581-9f2d9bbb81c9
+Error Number:2628,State:1,Class:16
+2026-11-26 10:23:02.661 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'First.dbo.Project', column 'Name'. Truncated value: 'Business Management '.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.Parser.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at First.Infrastructure.Repository.ProjectRepository.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Infrastructure/Repository/ProjectRepository.cs:line 75
+   at First.Application.Services.ProjectService.UpdateProject(Int32 projectId, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 71
+   at First.Api.Controller.ProjectController.UpdateProject(Int32 id, UpdateProjectDto dto) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:81d64f00-ef16-4872-9581-9f2d9bbb81c9
+Error Number:2628,State:1,Class:16
+2026-11-26 10:23:02.664 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - 500 null text/plain; charset=utf-8 115.2117ms
+2026-11-26 10:27:36.904 +05:45 [INF] Application is shutting down...
+2026-11-26 10:27:46.841 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-26 10:27:46.884 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-26 10:27:46.885 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-26 10:27:46.885 +05:45 [INF] Hosting environment: Development
+2026-11-26 10:27:46.885 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-26 10:27:46.968 +05:45 [INF] Token deleted successfully
+2026-11-26 10:27:56.476 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - application/json 32
+2026-11-26 10:27:56.501 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:27:56.508 +05:45 [INF] Route matched with {action = "UpdateProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProject(Int32, First.Application.Dtos.UpdateProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:27:56.533 +05:45 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-11-26 10:27:56.545 +05:45 [INF] Executed action First.Api.Controller.ProjectController.UpdateProject (First.Api) in 36.1912ms
+2026-11-26 10:27:56.546 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:27:56.546 +05:45 [INF] HTTP PATCH /api/Project/update-project responded 400 in 55.3483 ms
+2026-11-26 10:27:56.547 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - 400 null application/problem+json; charset=utf-8 72.2425ms
+2026-11-26 10:28:03.372 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - application/json 34
+2026-11-26 10:28:03.375 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:28:03.375 +05:45 [INF] Route matched with {action = "UpdateProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProject(Int32, First.Application.Dtos.UpdateProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:28:03.419 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewProjectDto'.
+2026-11-26 10:28:03.422 +05:45 [INF] Executed action First.Api.Controller.ProjectController.UpdateProject (First.Api) in 46.2187ms
+2026-11-26 10:28:03.422 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:28:03.422 +05:45 [INF] HTTP PATCH /api/Project/update-project responded 200 in 47.6805 ms
+2026-11-26 10:28:03.423 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - 200 null application/json; charset=utf-8 50.7209ms
+2026-11-26 10:28:21.786 +05:45 [INF] Request starting HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - application/json 34
+2026-11-26 10:28:21.792 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:28:21.792 +05:45 [INF] Route matched with {action = "UpdateProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProject(Int32, First.Application.Dtos.UpdateProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:28:21.798 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewProjectDto'.
+2026-11-26 10:28:21.799 +05:45 [INF] Executed action First.Api.Controller.ProjectController.UpdateProject (First.Api) in 6.4088ms
+2026-11-26 10:28:21.799 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.UpdateProject (First.Api)'
+2026-11-26 10:28:21.799 +05:45 [INF] HTTP PATCH /api/Project/update-project responded 200 in 9.4535 ms
+2026-11-26 10:28:21.799 +05:45 [INF] Request finished HTTP/1.1 PATCH http://localhost:5187/api/Project/update-project?id=1 - 200 null application/json; charset=utf-8 13.0507ms
+2026-11-26 10:28:39.221 +05:45 [INF] Request starting HTTP/1.1 POST http://localhost:5187/api/Project/add-project - application/json 34
+2026-11-26 10:28:39.224 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.AddProject (First.Api)'
+2026-11-26 10:28:39.229 +05:45 [INF] Route matched with {action = "AddProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddProject(First.Application.Dtos.AddProjectDto) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:28:39.238 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewProjectDto'.
+2026-11-26 10:28:39.238 +05:45 [INF] Executed action First.Api.Controller.ProjectController.AddProject (First.Api) in 9.1929ms
+2026-11-26 10:28:39.239 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.AddProject (First.Api)'
+2026-11-26 10:28:39.239 +05:45 [INF] HTTP POST /api/Project/add-project responded 200 in 15.3330 ms
+2026-11-26 10:28:39.239 +05:45 [INF] Request finished HTTP/1.1 POST http://localhost:5187/api/Project/add-project - 200 null application/json; charset=utf-8 17.8203ms
+2026-11-26 10:28:56.587 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=2 - null null
+2026-11-26 10:28:56.591 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:28:56.596 +05:45 [INF] Route matched with {action = "ViewProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewProject(Int32) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:28:56.601 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewProjectDto'.
+2026-11-26 10:28:56.601 +05:45 [INF] Executed action First.Api.Controller.ProjectController.ViewProject (First.Api) in 4.9355ms
+2026-11-26 10:28:56.601 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:28:56.601 +05:45 [INF] HTTP GET /api/Project/get-project responded 200 in 10.8437 ms
+2026-11-26 10:28:56.601 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=2 - 200 null application/json; charset=utf-8 14.623ms
+2026-11-26 10:29:02.254 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Project/get-projects - null null
+2026-11-26 10:29:02.255 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.GetProjects (First.Api)'
+2026-11-26 10:29:02.261 +05:45 [INF] Route matched with {action = "GetProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProjects() on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:29:02.270 +05:45 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[First.Application.Dtos.ViewProjectDto, First.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-26 10:29:02.271 +05:45 [INF] Executed action First.Api.Controller.ProjectController.GetProjects (First.Api) in 9.4197ms
+2026-11-26 10:29:02.271 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.GetProjects (First.Api)'
+2026-11-26 10:29:02.271 +05:45 [INF] HTTP GET /api/Project/get-projects responded 200 in 16.0428 ms
+2026-11-26 10:29:02.271 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Project/get-projects - 200 null application/json; charset=utf-8 17.3497ms
+2026-11-26 10:33:47.596 +05:45 [INF] Application is shutting down...
+2026-11-26 10:33:54.985 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-26 10:33:55.027 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-26 10:33:55.028 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-26 10:33:55.028 +05:45 [INF] Hosting environment: Development
+2026-11-26 10:33:55.028 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-26 10:33:55.112 +05:45 [INF] Token deleted successfully
+2026-11-26 10:33:58.453 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.html - null null
+2026-11-26 10:33:58.490 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.html - 200 null text/html;charset=utf-8 38.0042ms
+2026-11-26 10:33:58.869 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.css - null null
+2026-11-26 10:33:58.870 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/index.js - null null
+2026-11-26 10:33:58.870 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - null null
+2026-11-26 10:33:58.871 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-26 10:33:58.871 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - null null
+2026-11-26 10:33:58.871 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.js - 304 null null 1.0834ms
+2026-11-26 10:33:58.874 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/index.css - 304 null null 5.4903ms
+2026-11-26 10:33:58.874 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui.css - 304 null null 3.9457ms
+2026-11-26 10:33:58.875 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-standalone-preset.js - 304 null null 4.0606ms
+2026-11-26 10:33:58.879 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/swagger-ui-bundle.js - 304 null null 8.4769ms
+2026-11-26 10:33:58.953 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - null null
+2026-11-26 10:33:58.996 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.947ms
+2026-11-26 10:34:04.701 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - null null
+2026-11-26 10:34:04.724 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:34:04.736 +05:45 [INF] Route matched with {action = "ViewProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewProject(Int32) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:34:04.763 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewProjectDto'.
+2026-11-26 10:34:04.770 +05:45 [INF] Executed action First.Api.Controller.ProjectController.ViewProject (First.Api) in 32.421ms
+2026-11-26 10:34:04.770 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:34:04.771 +05:45 [INF] HTTP GET /api/Project/get-project responded 200 in 66.3430 ms
+2026-11-26 10:34:04.771 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - 200 null application/json; charset=utf-8 70.0154ms
+2026-11-26 10:34:32.290 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - null null
+2026-11-26 10:34:32.292 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:34:32.292 +05:45 [INF] Route matched with {action = "ViewProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewProject(Int32) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:34:32.293 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewProjectDto'.
+2026-11-26 10:34:32.293 +05:45 [INF] Executed action First.Api.Controller.ProjectController.ViewProject (First.Api) in 0.9197ms
+2026-11-26 10:34:32.293 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:34:32.293 +05:45 [INF] HTTP GET /api/Project/get-project responded 200 in 1.9669 ms
+2026-11-26 10:34:32.293 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - 200 null application/json; charset=utf-8 3.4389ms
+2026-11-26 10:35:11.601 +05:45 [INF] Application is shutting down...
+2026-11-26 10:35:22.367 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-26 10:35:22.412 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-26 10:35:22.413 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-26 10:35:22.414 +05:45 [INF] Hosting environment: Development
+2026-11-26 10:35:22.414 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-26 10:35:22.496 +05:45 [INF] Token deleted successfully
+2026-11-26 10:35:25.246 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Project/get-project - null null
+2026-11-26 10:35:25.270 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:35:25.278 +05:45 [INF] Route matched with {action = "ViewProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewProject(Int32) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:35:25.294 +05:45 [INF] Executed action First.Api.Controller.ProjectController.ViewProject (First.Api) in 15.0492ms
+2026-11-26 10:35:25.294 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:35:25.295 +05:45 [ERR] HTTP GET /api/Project/get-project responded 500 in 33.8631 ms
+System.Exception: Cannot find the project
+   at First.Application.Services.ProjectService.GetProjectById(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 40
+   at First.Api.Controller.ProjectController.ViewProject(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-26 10:35:25.300 +05:45 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Cannot find the project
+   at First.Application.Services.ProjectService.GetProjectById(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/services/ProjectService.cs:line 40
+   at First.Api.Controller.ProjectController.ViewProject(Int32 id) in /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/Controller/ProjectController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-26 10:35:25.302 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Project/get-project - 500 null text/plain; charset=utf-8 57.205ms
+2026-11-26 10:35:32.810 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - null null
+2026-11-26 10:35:32.814 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:35:32.814 +05:45 [INF] Route matched with {action = "ViewProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewProject(Int32) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:35:32.837 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewProjectDto'.
+2026-11-26 10:35:32.864 +05:45 [INF] Executed action First.Api.Controller.ProjectController.ViewProject (First.Api) in 49.9285ms
+2026-11-26 10:35:32.864 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:35:32.864 +05:45 [INF] HTTP GET /api/Project/get-project responded 200 in 51.7216 ms
+2026-11-26 10:35:32.865 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - 200 null application/json; charset=utf-8 55.2672ms
+2026-11-26 10:35:37.561 +05:45 [INF] Application is shutting down...
+2026-11-26 10:35:46.220 +05:45 [INF] User profile is available. Using '/Users/madhusudanbhandari/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-11-26 10:35:46.260 +05:45 [INF] Now listening on: http://localhost:5187
+2026-11-26 10:35:46.261 +05:45 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-26 10:35:46.261 +05:45 [INF] Hosting environment: Development
+2026-11-26 10:35:46.261 +05:45 [INF] Content root path: /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api
+2026-11-26 10:35:46.339 +05:45 [INF] Token deleted successfully
+2026-11-26 10:35:49.704 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - null null
+2026-11-26 10:35:49.726 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:35:49.734 +05:45 [INF] Route matched with {action = "ViewProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewProject(Int32) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:35:49.756 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewProjectDto'.
+2026-11-26 10:35:49.773 +05:45 [INF] Executed action First.Api.Controller.ProjectController.ViewProject (First.Api) in 38.3575ms
+2026-11-26 10:35:49.773 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:35:49.774 +05:45 [INF] HTTP GET /api/Project/get-project responded 200 in 55.6558 ms
+2026-11-26 10:35:49.775 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - 200 null application/json; charset=utf-8 72.3159ms
+2026-11-26 10:36:22.451 +05:45 [INF] Request starting HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - null null
+2026-11-26 10:36:22.457 +05:45 [INF] Executing endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:36:22.458 +05:45 [INF] Route matched with {action = "ViewProject", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewProject(Int32) on controller First.Api.Controller.ProjectController (First.Api).
+2026-11-26 10:36:22.459 +05:45 [INF] Executing OkObjectResult, writing value of type 'First.Application.Dtos.ViewProjectDto'.
+2026-11-26 10:36:22.460 +05:45 [INF] Executed action First.Api.Controller.ProjectController.ViewProject (First.Api) in 1.5886ms
+2026-11-26 10:36:22.460 +05:45 [INF] Executed endpoint 'First.Api.Controller.ProjectController.ViewProject (First.Api)'
+2026-11-26 10:36:22.460 +05:45 [INF] HTTP GET /api/Project/get-project responded 200 in 3.5963 ms
+2026-11-26 10:36:22.460 +05:45 [INF] Request finished HTTP/1.1 GET http://localhost:5187/api/Project/get-project?id=1 - 200 null application/json; charset=utf-8 9.5281ms
+2026-11-26 10:36:55.940 +05:45 [INF] Application is shutting down...

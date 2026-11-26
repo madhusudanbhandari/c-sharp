@@ -89,7 +89,10 @@ builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<ITaskService,TaskService>();
 builder.Services.AddScoped<ITokenRepository,TokenRepository>();
 builder.Services.AddHostedService<TokenCleanupService>();
+builder.Services.AddScoped<IProjectRepository,ProjectRepository>();
+builder.Services.AddScoped<IProjectService,ProjectService>();
 
+builder.Services.AddMemoryCache();
 
 builder.Services.AddControllers();
 
