@@ -4,13 +4,22 @@ using First.Application.Services;
 using First.Infrastructure.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using Serilog;
+using StackExchange.Redis;
 
 var builder=WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+{
+    var configuration=sp.GetRequiredService<IConfiguration>();
+
+    var connectionString=configuration["Redis:ConnectionString"];
+
+    return ConnectionMultiplexer.Connect(connectionString!);
+});
 
 builder.Host.UseSerilog((context, configuration) =>
 {
@@ -91,6 +100,8 @@ builder.Services.AddScoped<ITokenRepository,TokenRepository>();
 builder.Services.AddHostedService<TokenCleanupService>();
 builder.Services.AddScoped<IProjectRepository,ProjectRepository>();
 builder.Services.AddScoped<IProjectService,ProjectService>();
+builder.Services.AddScoped<IJobRepository,JobRepository>();
+builder.Services.AddScoped<IJobService,JobService>();
 
 builder.Services.AddMemoryCache();
 

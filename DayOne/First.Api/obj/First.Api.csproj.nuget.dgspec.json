@@ -88,6 +88,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[3.4.35, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[10.1.4, )"
@@ -1292,6 +1296,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[10.0.3, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[3.4.35, )"
             }
           },
           "imports": [

@@ -18,6 +18,7 @@
           "Serilog.AspNetCore": "11.0.0",
           "Serilog.Sinks.Console": "6.1.1",
           "Serilog.Sinks.File": "7.0.0",
+          "StackExchange.Redis": "3.4.35",
           "Swashbuckle.AspNetCore": "10.1.4"
         },
         "runtime": {
@@ -1025,6 +1026,14 @@
           }
         }
       },
+      "RESPite/3.4.35": {
+        "runtime": {
+          "lib/net10.0/RESPite.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.4.35.20751"
+          }
+        }
+      },
       "Serilog/4.4.0": {
         "runtime": {
           "lib/net10.0/Serilog.dll": {
@@ -1131,6 +1140,18 @@
           "lib/net9.0/Serilog.Sinks.File.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.0.0"
+          }
+        }
+      },
+      "StackExchange.Redis/3.4.35": {
+        "dependencies": {
+          "RESPite": "3.4.35",
+          "System.IO.Hashing": "10.0.13"
+        },
+        "runtime": {
+          "lib/net10.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.4.35.20751"
           }
         }
       },
@@ -1292,6 +1313,14 @@
           }
         }
       },
+      "System.IO.Hashing/10.0.13": {
+        "runtime": {
+          "lib/net10.0/System.IO.Hashing.dll": {
+            "assemblyVersion": "10.0.0.13",
+            "fileVersion": "10.0.1326.50504"
+          }
+        }
+      },
       "System.IO.Pipelines/11.0.0": {
         "runtime": {
           "lib/net10.0/System.IO.Pipelines.dll": {
@@ -1366,7 +1395,8 @@
           "First.Domain": "1.0.0",
           "Microsoft.Data.SqlClient": "7.1.2",
           "Npgsql": "10.0.3",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.3"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.3",
+          "StackExchange.Redis": "3.4.35"
         },
         "runtime": {
           "First.Infrastructure.dll": {
@@ -1810,6 +1840,13 @@
       "path": "npgsql.entityframeworkcore.postgresql/10.0.3",
       "hashPath": "npgsql.entityframeworkcore.postgresql.10.0.3.nupkg.sha512"
     },
+    "RESPite/3.4.35": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zTr+o8+ypJW/ywwbCmkP7UQvfacgK0QndLIE5YAay9XGa6mYn7X+fkd9JBle3ADVmwlMjGqCmX/RWi0EBX23yg==",
+      "path": "respite/3.4.35",
+      "hashPath": "respite.3.4.35.nupkg.sha512"
+    },
     "Serilog/4.4.0": {
       "type": "package",
       "serviceable": true,
@@ -1872,6 +1909,13 @@
       "sha512": "sha512-fKL7mXv7qaiNBUC71ssvn/dU0k9t0o45+qm2XgKAlSt19xF+ijjxyA3R6HmCgfKEKwfcfkwWjayuQtRueZFkYw==",
       "path": "serilog.sinks.file/7.0.0",
       "hashPath": "serilog.sinks.file.7.0.0.nupkg.sha512"
+    },
+    "StackExchange.Redis/3.4.35": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xHxw0PcoebCMHfH2IQU/ZhAiu+ZKnXku544lZp0x81asg20rRrz8N6o43VZtbGL9t/OktZ4Pf9PtLxCLoaLHKw==",
+      "path": "stackexchange.redis/3.4.35",
+      "hashPath": "stackexchange.redis.3.4.35.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/10.1.4": {
       "type": "package",
@@ -1977,6 +2021,13 @@
       "sha512": "sha512-mUuRjk0KKvF3dlF7CKcnjHn/4TFaWRDGjDRtn1rACitoIflv96apfLD9KPDisyCEuc/0ierocnHCvIXBvCL4Sw==",
       "path": "system.identitymodel.tokens.jwt/8.23.0",
       "hashPath": "system.identitymodel.tokens.jwt.8.23.0.nupkg.sha512"
+    },
+    "System.IO.Hashing/10.0.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZlcywyQ7FJmgOV2nctdfOEPGS0kRK8T2CdOoPr6F4HPYpmjSo6GQfj3yTyOzNO6B+2U84/JKSPkJJMWqLmVsMw==",
+      "path": "system.io.hashing/10.0.13",
+      "hashPath": "system.io.hashing.10.0.13.nupkg.sha512"
     },
     "System.IO.Pipelines/11.0.0": {
       "type": "package",

@@ -401,3 +401,6 @@
 /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/bin/Debug/net10.0/System.Diagnostics.EventLog.dll
 /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/bin/Debug/net10.0/runtimes/win/lib/net10.0/System.Diagnostics.EventLog.Messages.dll
 /Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/bin/Debug/net10.0/runtimes/win/lib/net10.0/System.Diagnostics.EventLog.dll
+/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/bin/Debug/net10.0/RESPite.dll
+/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/bin/Debug/net10.0/StackExchange.Redis.dll
+/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Api/bin/Debug/net10.0/System.IO.Hashing.dll
