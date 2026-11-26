@@ -2,7 +2,7 @@
 
 namespace First.Test;
 
-public class Test
+public class TestExample
 {
     [Fact]
     public void Add_Two_Numbers_And_Return_Sum()

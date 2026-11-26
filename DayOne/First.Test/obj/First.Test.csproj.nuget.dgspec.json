@@ -721,6 +721,9 @@
             "projectReferences": {
               "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/First.Application.csproj": {
                 "projectPath": "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Application/First.Application.csproj"
+              },
+              "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Domain/First.Domain.csproj": {
+                "projectPath": "/Users/madhusudanbhandari/Desktop/Ofc/c-sharp/DayOne/First.Domain/First.Domain.csproj"
               }
             }
           }
@@ -745,6 +748,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.14.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.21.0, )"
             },
             "coverlet.collector": {
               "target": "Package",
